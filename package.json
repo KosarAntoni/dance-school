@@ -12,8 +12,15 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
+    "prepare": "husky install",
     "clean": "gatsby clean",
-    "prepare": "husky install"
+    "clean:all": "rimraf node_modules public .cache && rimraf node_modules",
+    "clean:cache": "rimraf public .cache",
+    "lint": "eslint . -c .eslintrc.js . --ext .js,.ts,.jsx,.tsx",
+    "lint:fix": "yarn lint --fix",
+    "test": "yarn jest",
+    "format": "prettier \"**/*.{js,jsx,ts,tsx,md,json}\"",
+    "format:fix": "yarn format --write"
   },
   "dependencies": {
     "gatsby": "^4.5.3",
@@ -30,6 +37,7 @@
     "sass": "^1.49.0"
   },
   "devDependencies": {
+    "rimraf": "^3.0.2",
     "@babel/core": "^7.16.10",
     "@babel/preset-env": "^7.16.10",
     "@babel/preset-typescript": "^7.16.7",
