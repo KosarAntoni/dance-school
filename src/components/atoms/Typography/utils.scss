@@ -1,0 +1,94 @@
+// Variables
+$lineHeightsMap: (
+  big: 2,
+  regular: 1.5,
+  small: 1.1,
+);
+
+$paddingsMap: (
+  xxs: $gap-xxsmall,
+  xs: $gap-xsmall,
+  sm: $gap-small,
+  md: $gap-regular,
+  lg: $gap-large,
+  xl: $gap-xlarge,
+  xxl: $gap-xxlarge,
+  xxxl: $gap-xxxlarge,
+  huge: $gap-huge,
+);
+
+$fontSizesList: 8, 10, 12, 14, 15, 16, 17, 18, 20, 24, 25, 28, 30, 35, 40, 42, 50, 55, 65;
+
+$sidesList: 'top', 'left', 'bottom', 'right';
+
+$alignsList: 'inherit', 'left', 'center', 'right';
+
+// Mixins
+
+@mixin lineHeight($size) {
+  .typography--line-height-#{$size} {
+    line-height: map-get($lineHeightsMap, $size);
+  }
+}
+
+@mixin padding($breakpoint: 'none') {
+  @each $side in $sidesList {
+    @if $breakpoint != 'none' {
+      @each $size, $value in $paddingsMap {
+        .typography--padding-#{$side}-#{$breakpoint}-#{$size} {
+          @include breakpoint(#{$breakpoint}-up) {
+            padding-#{$side}: map-get($paddingsMap, $size);
+          }
+        }
+      }
+    } @else {
+      @each $size, $value in $paddingsMap {
+        .typography--padding-#{$side}-#{$size} {
+          padding-#{$side}: map-get($paddingsMap, $size);
+        }
+      }
+    }
+  }
+}
+
+@mixin align($breakpoint: 'none') {
+  @each $align in $alignsList {
+    @if $breakpoint != 'none' {
+      .typography--align-#{$breakpoint}-#{$align} {
+        @include breakpoint(#{$breakpoint}-up) {
+          text-align: #{$align};
+        }
+      }
+    } @else {
+      .typography--align-#{$align} {
+        text-align: #{$align};
+      }
+    }
+  }
+}
+
+@mixin size($breakpoint: 'none') {
+  @each $size in $fontSizesList {
+    @if $breakpoint != 'none' {
+      .typography--size-#{$breakpoint}-#{$size} {
+        @include breakpoint(#{$breakpoint}-up) {
+          @include font-size($size);
+        }
+      }
+    } @else {
+      .typography--size-#{$size} {
+        @include font-size($size);
+      }
+    }
+  }
+}
+
+@mixin heading() {
+  @for $i from 1 through 6 {
+    h#{$i} {
+      &.typography {
+        @extend .heading;
+      }
+    }
+  }
+}

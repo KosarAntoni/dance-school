@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    'jest/globals': true,
   },
   extends: ['plugin:react/recommended', 'airbnb', 'plugin:prettier/recommended'],
   parser: '@typescript-eslint/parser',
@@ -14,6 +15,9 @@ module.exports = {
   },
   plugins: ['react', 'simple-import-sort', '@typescript-eslint', 'jest'],
   rules: {
+    'import/no-extraneous-dependencies': 0,
+    'no-restricted-exports': 0,
+    'react/jsx-props-no-spreading': 0,
     'import/prefer-default-export': 0,
     'no-use-before-define': 0,
     'import/extensions': 0,
@@ -57,25 +61,22 @@ module.exports = {
   settings: {
     'import/resolver': {
       typescript: {},
-      node: {
+      alias: {
+        map: [
+          ['atoms', './src/components/atoms'],
+          ['molecules', './src/componets/molecules'],
+          ['organisms', './src/componets/organisms'],
+          ['templates', './src/componets/templates'],
+          ['pages', './src/pages'],
+          ['styles', './src/styles'],
+          ['mocks', './src/mocks'],
+          ['utils', './src/utils'],
+          ['hooks', './src/hooks'],
+          ['shared', './src/shared'],
+          ['constants', './src/constants'],
+        ],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        moduleDirectory: ['src'],
       },
-      alias: [
-        ['layout', './src/layout'],
-        ['common', './src/common'],
-        ['components', './src/components'],
-        ['containers', './src/containers'],
-        ['templates', './src/templates'],
-        ['pages', './src/pages'],
-        ['styles', './src/styles'],
-        ['mocks', './src/mocks'],
-        ['utils', './src/utils'],
-        ['utils', './src/testUtils'],
-        ['hooks', './src/hooks'],
-        ['shared', './src/shared'],
-        ['constants', './src/constants'],
-      ],
     },
   },
 };

@@ -1,0 +1,50 @@
+@import 'styles/component-set.scss';
+@import './utils.scss';
+
+.typography {
+  font-family: $font-base;
+  font-weight: 400;
+  position: relative;
+  display: inline-block;
+
+  &--light {
+    font-weight: 300;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+}
+
+.heading {
+  font-family: $font-heading;
+  letter-spacing: 0.064rem;
+  @extend .typography;
+}
+
+@include lineHeight('big');
+@include lineHeight('regular');
+@include lineHeight('small');
+@include heading();
+
+@include align();
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include align($breakpoint);
+}
+
+@include padding();
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include padding($breakpoint);
+}
+
+@include size();
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include size($breakpoint);
+}
