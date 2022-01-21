@@ -58,6 +58,14 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        'no-undef': 0,
+      },
+    },
+  ],
   settings: {
     'import/resolver': {
       typescript: {},

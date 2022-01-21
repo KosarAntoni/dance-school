@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the NavBase component renders correctly with required and optional props 1`] = `
+<a
+  aria-label="test-label"
+  href="/about/"
+>
+  test-content
+</a>
+`;
