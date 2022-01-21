@@ -1,0 +1,63 @@
+@import './colors';
+
+/* Fonts
+************************************************************** */
+
+$font-nato: sans-serif;
+$font-lilita: sans-serif;
+
+$font-heading: $font-lilita;
+$font-base: $font-nato;
+
+$font-size-base: 16;
+
+/* Wrappers
+************************************************************** */
+
+$wrapper-mobile: 480px;
+$wrapper: 1160px;
+$wrapper-wide: 1920px;
+
+/* Paddings, Margins
+************************************************************** */
+
+$gap-xxsmall: 4px;
+$gap-xsmall: 8px;
+$gap-small: 16px;
+$gap-regular: 20px;
+$gap-large: 24px;
+$gap-xlarge: 32px;
+$gap-xxlarge: 48px;
+$gap-xxxlarge: 60px;
+$gap-huge: 70px;
+
+/* Misc
+************************************************************** */
+
+$transition: 0.3s;
+
+/* Z-index
+************************************************************** */
+
+$z-index: (
+  underGround: -1,
+  ground: 1,
+  overGround: 2,
+  header: 11,
+  underHeader: 10,
+  overHeader: 12,
+  modalOverlay: 9998,
+  modal: 9999,
+);
+
+/* Grid - media queries
++************************************************************** */
+
+$breakpoints: (
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px,
+);

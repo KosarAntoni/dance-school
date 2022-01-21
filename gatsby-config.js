@@ -17,5 +17,11 @@ module.exports = {
       },
       __key: 'images',
     },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/templates/Layout/Layout.tsx`),
+      },
+    },
   ],
 };

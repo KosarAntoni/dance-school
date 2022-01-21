@@ -1,0 +1,17 @@
+.color {
+  &--dark-green {
+    color: $c-dark-green;
+  }
+
+  &--green {
+    color: $c-green;
+  }
+
+  &--white {
+    color: $c-white;
+  }
+
+  &--black {
+    color: $c-black;
+  }
+}

@@ -1,0 +1,25 @@
+.background {
+  &--white {
+    background-color: $c-white;
+  }
+
+  &--black {
+    background-color: $c-black;
+  }
+
+  &--dark-green {
+    background-color: $c-dark-green;
+  }
+
+  &--light-mint {
+    background-color: $c-light-mint;
+  }
+
+  &--mint {
+    background-color: $c-mint;
+  }
+
+  &--almost-white {
+    background-color: $c-almost-white;
+  }
+}

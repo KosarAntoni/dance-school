@@ -14,8 +14,17 @@ module.exports = {
   },
   plugins: ['react', 'simple-import-sort', '@typescript-eslint', 'jest'],
   rules: {
+    'import/prefer-default-export': 0,
     'no-use-before-define': 0,
+    'import/extensions': 0,
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx', '.ts'] }],
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
     'prettier/prettier': [
       2,
       {
@@ -31,8 +40,8 @@ module.exports = {
           // After builtins comes packages without space in between. `react` related packages first, then `gatsby`, then rest.
           // eslint-disable-next-line global-require
           [`^(${require('module').builtinModules.join('|')})(/|$)`, '^react', '^gatsby', '^@?\\w'],
-          // Internal packages in order: layout, common, components, containers.
-          ['^layout(/.*|$)', '^common(/.*|$)', '^components(/.*|$)', '^containers(/.*|$)'],
+          // Internal packages in order: atoms, molecules, organisms, temlates.
+          ['^atoms(/.*|$)', '^molecules(/.*|$)', '^organisms(/.*|$)', '^templates(/.*|$)'],
           // Utils and hooks.
           ['^utils(/.*|$)', '^hooks(/.*|$)'],
           // Then parent and siblings - order is kept thanks to alphabetical sorting.

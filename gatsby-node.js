@@ -1,16 +1,15 @@
 const path = require(`path`);
 
-const PROJECT_ROOT = path.resolve(__dirname, '/');
+const PROJECT_ROOT = path.resolve(__dirname, './');
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        layout: path.resolve(PROJECT_ROOT, 'src/layout'),
-        atoms: path.resolve(PROJECT_ROOT, 'src/atoms'),
-        molecules: path.resolve(PROJECT_ROOT, 'src/molecules'),
-        organisms: path.resolve(PROJECT_ROOT, 'src/organisms'),
-        templates: path.resolve(PROJECT_ROOT, 'src/templates'),
+        atoms: path.resolve(PROJECT_ROOT, 'src/components/atoms'),
+        molecules: path.resolve(PROJECT_ROOT, 'src/components/molecules'),
+        organisms: path.resolve(PROJECT_ROOT, 'src/components/organisms'),
+        templates: path.resolve(PROJECT_ROOT, 'src/components/templates'),
         pages: path.resolve(PROJECT_ROOT, 'src/pages'),
         styles: path.resolve(PROJECT_ROOT, 'src/styles'),
         mocks: path.resolve(PROJECT_ROOT, 'src/mocks'),
