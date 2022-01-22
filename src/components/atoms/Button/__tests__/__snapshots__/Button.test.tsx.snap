@@ -6,7 +6,7 @@ exports[`the Button component renders correctly with required and optional props
   type="button"
 >
   <span
-    class="typography button__content typography--size-20"
+    class="typography button__content typography--size-20 typography--line-height-normal"
     data-testid="typography-item"
   >
     test content

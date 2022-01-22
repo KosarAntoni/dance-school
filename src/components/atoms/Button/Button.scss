@@ -4,7 +4,7 @@
   position: relative;
   flex-direction: row;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 8px;
   transition: background-color $transition;
   @include center-content();
 
@@ -60,7 +60,7 @@
 
       &:hover,
       &:focus {
-        background-color: lighten($c-black, 5);
+        background-color: lighten($c-black, 25);
       }
 
       &:after {
@@ -116,7 +116,7 @@
 
       &:hover,
       &:focus {
-        color: lighten($c-black, 5);
+        color: lighten($c-black, 25);
       }
     }
 

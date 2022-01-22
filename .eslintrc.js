@@ -15,6 +15,14 @@ module.exports = {
   },
   plugins: ['react', 'simple-import-sort', '@typescript-eslint', 'jest'],
   rules: {
+    'jsx-a11y/anchor-is-valid': [
+      2,
+      {
+        components: ['Link'],
+        specialLink: ['to', 'hrefLeft', 'hrefRight', 'url'],
+        aspects: ['noHref', 'invalidHref', 'preferButton'],
+      },
+    ],
     'import/no-extraneous-dependencies': 0,
     'no-restricted-exports': 0,
     'react/jsx-props-no-spreading': 0,

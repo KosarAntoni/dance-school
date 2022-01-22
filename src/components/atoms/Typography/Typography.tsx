@@ -22,7 +22,7 @@ import './Typography.scss';
 const Typography: FC<TypographyProps> = ({
   as /** 'h1' | 'h2' | 'h3' | 'p' | 'span' */,
   align /** 'inherit' | 'left' | 'center' | 'right' | { @requires base: value, @optional breakpoint: value} */,
-  lineHeight /** 'small' | 'normal' | 'big' */,
+  lineHeight = 'normal' /** 'small' | 'normal' | 'big' */,
   weight /** 'light' | 'bold' | 'black' */,
   italic /** boolean */,
   size /** 8 | 10 | 12 | 14 | 15 | 16 | 17 | 18 | 20 | 24 | 25 | 28 | 30 | 35 | 40 | 42 | 50 | 55 | 65 | { @requires base: value, @optional breakpoint: value} */,

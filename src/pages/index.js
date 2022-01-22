@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import Button from 'atoms/Button';
+import Link from 'atoms/Link';
 import Typography from 'atoms/Typography';
 
 // styles
@@ -151,6 +152,26 @@ const IndexPage = () => {
       <Button variant="outline" padding="md" color="blue">
         TEST BUTTON
       </Button>
+      <Link url="/" color="white" hasArrow size={24}>
+        Test link
+      </Link>
+      <Link url="/" color="black" hasArrow size={30}>
+        Test link
+      </Link>
+      <Link url="/" color="blue" hasArrow size={24}>
+        Test link
+      </Link>
+      <div>
+        <Link url="/" variant="solid" color="white" padding="sm">
+          TEST LINK
+        </Link>
+        <Link url="/" variant="solid" color="black" padding="xs" size={20}>
+          TEST LINK
+        </Link>
+        <Link url="/" variant="solid" color="blue">
+          TEST LINK
+        </Link>
+      </div>
       <title>Home Page</title>
       <h1 style={headingStyles}>
         Congratulations
