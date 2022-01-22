@@ -6,7 +6,7 @@ exports[`the Modal component renders correctly with required and optional props 
   data-testid="modal-item"
 >
   <div
-    class="container modal__content background--white shadow--dark-green"
+    class="container modal__content background--white"
   >
     <button
       class="button modal__close button--simple-black button--around"
