@@ -88,6 +88,8 @@
   }
 
   &--outline {
+    transition: opacity $transition, color $transition, background-color $transition;
+
     &::after {
       color: inherit;
       position: absolute;
@@ -96,40 +98,56 @@
       height: calc(100%);
       border-radius: inherit;
       content: '';
-      box-shadow: currentColor 0 0 0 2px inset;
-      transition: opacity $transition;
     }
 
     &-white {
       @extend .button--outline;
 
-      color: $c-white;
+      color: $c-black;
+      background-color: $c-white;
+
+      &::after {
+        box-shadow: $c-black 0 0 0 2px inset;
+      }
 
       &:hover,
       &:focus {
-        color: darken($c-white, 5);
+        color: $c-white;
+        background-color: $c-black;
       }
     }
 
     &-black {
       @extend .button--outline;
 
-      color: $c-black;
+      color: $c-white;
+      background-color: $c-black;
+
+      &::after {
+        box-shadow: $c-white 0 0 0 2px inset;
+      }
 
       &:hover,
       &:focus {
-        color: lighten($c-black, 25);
+        color: $c-black;
+        background-color: $c-white;
       }
     }
 
     &-blue {
       @extend .button--outline;
 
-      color: $c-pastel-blue;
+      color: $c-white;
+      background-color: $c-pastel-blue;
+
+      &::after {
+        box-shadow: $c-white 0 0 0 2px inset;
+      }
 
       &:hover,
       &:focus {
-        color: lighten($c-pastel-blue, 5);
+        color: $c-pastel-blue;
+        background-color: $c-white;
       }
     }
   }
