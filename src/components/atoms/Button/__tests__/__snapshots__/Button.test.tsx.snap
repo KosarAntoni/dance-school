@@ -2,14 +2,14 @@
 
 exports[`the Button component renders correctly with required and optional props 1`] = `
 <button
-  class="button test-class button--dark-green button--solid button--around"
+  class="button test-class button--solid-blue button--around"
   type="button"
 >
-  <div
+  <span
     class="typography button__content typography--size-20"
     data-testid="typography-item"
   >
     test content
-  </div>
+  </span>
 </button>
 `;

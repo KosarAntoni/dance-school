@@ -7,19 +7,23 @@
     background-color: $c-black;
   }
 
-  &--dark-green {
-    background-color: $c-dark-green;
+  &--red {
+    background-color: $c-red;
   }
 
-  &--light-mint {
-    background-color: $c-light-mint;
+  &--green {
+    background-color: $c-green;
   }
 
-  &--mint {
-    background-color: $c-mint;
+  &--patel-blue {
+    background-color: $c-pastel-blue;
   }
 
-  &--almost-white {
-    background-color: $c-almost-white;
+  &--light-gray {
+    background-color: $c-light-gray;
+  }
+
+  &--dark-gray {
+    background-color: $c-dark-gray;
   }
 }

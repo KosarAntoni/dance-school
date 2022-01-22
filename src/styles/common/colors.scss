@@ -1,36 +1,16 @@
 /* Base Colors
 ************************************************************** */
 
-$c-white: #fff;
-$c-black: #000;
-$c-red: #e02020;
-
-$c-almost-white: #fbfbfb;
-$c-light-gray: #f3f1f2;
-$c-pastel-green: #89ca91;
-$c-light-green: #32a748;
-$c-green: #008f2d;
-$c-dark-green: #295d39;
-$c-light-mint: #e3f1ec;
-$c-mint: #52b59e;
-$c-light-purple: #be8eb7;
-$c-purple: #812774;
-
-$c-rbBlue: #25b1e6;
-$c-rbGray: #415a6c;
-
-/* Colors with an alpha channel
-************************************************************** */
-
-$c-25-dark-green: rgba($c-dark-green, 0.25);
-$c-85-white: rgba($c-white, 0.85);
-$c-50-black: rgba($c-black, 0.5);
+$c-white: rgb(255, 255, 255);
+$c-black: rgb(0, 0, 0);
+$c-red: rgb(255, 101, 107);
+$c-green: rgb(31, 218, 138);
+$c-pastel-blue: rgb(102, 110, 255);
+$c-light-gray: rgb(248, 248, 248);
+$c-dark-gray: rgb(40, 41, 41);
 
 /* Theme Colors
 ************************************************************** */
 
-$c-accent-primary: $c-dark-green;
-$c-accent-secondary: $c-green;
-
-$c-text-color: $c-dark-green;
-$c-page-background: $c-red;
+$c-text-color: $c-black;
+$c-page-background: $c-white;

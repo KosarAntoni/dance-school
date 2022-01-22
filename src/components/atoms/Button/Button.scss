@@ -1,17 +1,12 @@
-@import 'styles/common/component-set.scss';
+@import 'styles/component-set.scss';
 
 .button {
   position: relative;
   flex-direction: row;
   cursor: pointer;
-  background: transparent;
-  border: none;
-  transition: transform $transition;
-  @include flexCenter();
-
-  &:hover {
-    transform: translateY(-2px);
-  }
+  border-radius: 10px;
+  transition: background-color $transition;
+  @include center-content();
 
   &__content {
     display: flex;
@@ -22,83 +17,146 @@
 
   &--solid {
     position: relative;
-    border-radius: 100px;
 
     &::after {
       position: absolute;
       display: inherit;
-      width: 100%;
-      height: 100%;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
       border-radius: inherit;
       content: '';
       opacity: 0;
       transition: opacity $transition;
-      @extend .shadow--dark-green;
     }
 
-    &:hover {
-      transform: translateY(-2px);
-
-      &::after {
+    &:focus,
+    &:active {
+      &:after {
         opacity: 1;
       }
     }
 
-    &.button {
-      &--white {
-        @extend .background--white;
-        @extend .color--dark-green;
+    &-white {
+      @extend .button--solid;
+
+      color: $c-black;
+      background-color: $c-white;
+
+      &:hover,
+      &:focus {
+        background-color: darken($c-white, 5);
       }
 
-      &--dark-green {
-        @extend .background--dark-green;
-        @extend .color--white;
+      &:after {
+        box-shadow: darken($c-white, 5) 0 0 0 2px;
+      }
+    }
+
+    &-black {
+      @extend .button--solid;
+
+      color: $c-white;
+      background-color: $c-black;
+
+      &:hover,
+      &:focus {
+        background-color: lighten($c-black, 5);
       }
 
-      &--transparent {
-        @extend .color--dark-green;
+      &:after {
+        box-shadow: lighten($c-black, 5) 0 0 0 2px;
+      }
+    }
+
+    &-blue {
+      @extend .button--solid;
+
+      color: $c-white;
+      background-color: $c-pastel-blue;
+
+      &:hover,
+      &:focus {
+        background-color: lighten($c-pastel-blue, 5);
+      }
+
+      &:after {
+        box-shadow: lighten($c-pastel-blue, 5) 0 0 0 2px;
       }
     }
   }
 
   &--outline {
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
+    &::after {
+      color: inherit;
+      position: absolute;
+      display: inherit;
+      width: calc(100%);
+      height: calc(100%);
+      border-radius: inherit;
+      content: '';
+      box-shadow: currentColor 0 0 0 2px inset;
+      transition: opacity $transition;
+    }
 
-    &.button {
-      &--white {
-        @extend .color--white;
-        border-color: $c-white;
+    &-white {
+      @extend .button--outline;
+
+      color: $c-white;
+
+      &:hover,
+      &:focus {
+        color: darken($c-white, 5);
       }
+    }
 
-      &--dark-green {
-        @extend .color--dark-green;
-        border-color: $c-dark-green;
+    &-black {
+      @extend .button--outline;
+
+      color: $c-black;
+
+      &:hover,
+      &:focus {
+        color: lighten($c-black, 5);
       }
+    }
 
-      &--transparent {
-        @extend .color--dark-green;
-        border-color: transparent;
+    &-blue {
+      @extend .button--outline;
+
+      color: $c-pastel-blue;
+
+      &:hover,
+      &:focus {
+        color: lighten($c-pastel-blue, 5);
       }
     }
   }
 
   &--simple {
-    &:hover {
-      transform: none;
+    &-white {
+      color: $c-white;
+
+      &:hover,
+      &:focus {
+        color: darken($c-white, 5);
+      }
     }
 
-    &.button {
-      &--white {
-        @extend .color--white;
-      }
+    &-black {
+      color: $c-black;
 
-      &--dark-green {
-        @extend .color--dark-green;
+      &:hover,
+      &:focus {
+        color: lighten($c-black, 5);
       }
+    }
 
-      &--transparent {
-        @extend .color--dark-green;
+    &-blue {
+      color: $c-pastel-blue;
+
+      &:hover,
+      &:focus {
+        color: lighten($c-pastel-blue, 5);
       }
     }
   }
@@ -121,6 +179,5 @@
 
   &--disabled {
     opacity: 0.5;
-    @extend .total-disabled;
   }
 }

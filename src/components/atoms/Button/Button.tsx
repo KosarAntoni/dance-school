@@ -10,9 +10,9 @@ import './Button.scss';
 
 const Button: FC<ButtonProps> = ({
   children,
-  variant,
+  variant = 'solid',
   space = 'around',
-  color = 'dark-green',
+  color = 'blue',
   disabled,
   className,
   onClick,
@@ -25,8 +25,7 @@ const Button: FC<ButtonProps> = ({
   padding,
 }) => {
   const buttonClasses = classNames('button', className, {
-    [`button--${color}`]: color,
-    [`button--${variant}`]: variant,
+    [`button--${variant}-${color}`]: variant && color,
     [`button--${space}`]: space,
     'button--disabled': disabled,
   });
@@ -44,7 +43,7 @@ const Button: FC<ButtonProps> = ({
 
   return (
     <NavBase className={buttonClasses} {...navBaseProps}>
-      <Typography as="div" {...typographyProps} className={buttonContentClasses}>
+      <Typography as="span" {...typographyProps} className={buttonContentClasses}>
         {children}
       </Typography>
     </NavBase>

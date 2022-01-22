@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import Button from 'atoms/Button';
 import Typography from 'atoms/Typography';
 
 // styles
@@ -130,8 +131,26 @@ const links = [
 // markup
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
+    <main style={pageStyles} className="background--light-gray">
       <Typography size={{ base: 20, md: 24 }}>Test</Typography>
+      <Button variant="solid" padding="md" color="white">
+        TEST BUTTON
+      </Button>
+      <Button variant="solid" padding="md" color="black">
+        TEST BUTTON
+      </Button>
+      <Button variant="solid" padding="md" color="blue">
+        TEST BUTTON
+      </Button>
+      <Button variant="outline" padding="md" color="white">
+        TEST BUTTON
+      </Button>
+      <Button variant="outline" padding="md" color="black">
+        TEST BUTTON
+      </Button>
+      <Button variant="outline" padding="md" color="blue">
+        TEST BUTTON
+      </Button>
       <title>Home Page</title>
       <h1 style={headingStyles}>
         Congratulations

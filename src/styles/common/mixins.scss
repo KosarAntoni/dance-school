@@ -4,6 +4,12 @@
   font-size: calc(($target / $context) * 1rem);
 }
 
+@mixin center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin breakpoint($point) {
   $query-direction: '';
   $query-point: '';

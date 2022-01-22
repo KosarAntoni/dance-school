@@ -14,7 +14,7 @@ const NavBase: FC<NavBaseProps> = ({
   className,
   ...rest
 }) => {
-  const renderDiv = <div className={className}>{children}</div>;
+  const renderSpan = <span className={className}>{children}</span>;
 
   const renderLink = (): JSX.Element => {
     const isInternal = url && beginigSlashRegexp.test(url);
@@ -72,7 +72,7 @@ const NavBase: FC<NavBaseProps> = ({
       return renderButton;
     }
 
-    return renderDiv;
+    return renderSpan;
   };
 
   return renderComponent();

@@ -1,17 +1,29 @@
 .color {
-  &--dark-green {
-    color: $c-dark-green;
-  }
-
-  &--green {
-    color: $c-green;
-  }
-
   &--white {
     color: $c-white;
   }
 
   &--black {
     color: $c-black;
+  }
+
+  &--red {
+    color: $c-red;
+  }
+
+  &--green {
+    color: $c-green;
+  }
+
+  &--patel-blue {
+    color: $c-pastel-blue;
+  }
+
+  &--light-gray {
+    color: $c-light-gray;
+  }
+
+  &--dark-gray {
+    color: $c-dark-gray;
   }
 }
