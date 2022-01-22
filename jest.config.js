@@ -5,6 +5,12 @@ module.exports = {
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss)$': `identity-obj-proxy`,
     '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': `<rootDir>/jest/__mocks__/file-mock.js`,
+    'atoms/(.*)': '<rootDir>/src/components/atoms/$1',
+    'molecules/(.*)': '<rootDir>/src/components/molecules/$1',
+    'organisms/(.*)': '<rootDir>/src/components/organisms/$1',
+    'templates/(.*)': '<rootDir>/src/components/templates/$1',
+    'pages/(.*)': '<rootDir>/src/pages/$1',
+    'utils/(.*)': '<rootDir>/src/utils/$1',
     'shared/(.*)': '<rootDir>/src/shared/$1',
   },
   testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],

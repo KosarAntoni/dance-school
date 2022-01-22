@@ -69,22 +69,6 @@ module.exports = {
   settings: {
     'import/resolver': {
       typescript: {},
-      alias: {
-        map: [
-          ['atoms', './src/components/atoms'],
-          ['molecules', './src/componets/molecules'],
-          ['organisms', './src/componets/organisms'],
-          ['templates', './src/componets/templates'],
-          ['pages', './src/pages'],
-          ['styles', './src/styles'],
-          ['mocks', './src/mocks'],
-          ['utils', './src/utils'],
-          ['hooks', './src/hooks'],
-          ['shared', './src/shared'],
-          ['constants', './src/constants'],
-        ],
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
     },
   },
 };
