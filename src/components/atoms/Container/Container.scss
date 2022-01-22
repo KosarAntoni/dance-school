@@ -1,0 +1,21 @@
+@import 'styles/component-set.scss';
+
+.container {
+  width: 100%;
+  max-width: $wrapper-default;
+  margin-right: auto;
+  margin-left: auto;
+
+  &--fluid {
+    max-width: 100%;
+  }
+
+  &--wide {
+    max-width: $wrapper-wide;
+  }
+
+  &--gutter {
+    padding-right: $gap-default;
+    padding-left: $gap-default;
+  }
+}

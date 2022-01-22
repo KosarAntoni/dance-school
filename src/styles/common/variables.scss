@@ -14,8 +14,7 @@ $font-size-base: 16;
 /* Wrappers
 ************************************************************** */
 
-$wrapper-mobile: 480px;
-$wrapper: 1160px;
+$wrapper-default: 1160px;
 $wrapper-wide: 1920px;
 
 /* Paddings, Margins
@@ -30,6 +29,8 @@ $gap-xlarge: 32px;
 $gap-xxlarge: 48px;
 $gap-xxxlarge: 60px;
 $gap-huge: 70px;
+
+$gap-default: $gap-regular;
 
 /* Misc
 ************************************************************** */

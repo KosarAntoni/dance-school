@@ -1,0 +1,82 @@
+@import 'styles/component-set.scss';
+
+@keyframes fade-in {
+  0% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(150%) rotate(5deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+
+  100% {
+    transform: translateY(-150%) rotate(-5deg);
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: map-get($z-index, 'modalOverlay');
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  animation: fade-in $transition 1 forwards;
+  @include center-content();
+
+  &__content {
+    position: relative;
+    z-index: map-get($z-index, 'modal');
+    height: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    transform: translateY(150%) rotate(5deg);
+    animation: slide-in $transition * 1.5 1 cubic-bezier(0.39, 0.8, 0.28, 1.07) forwards;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: inherit;
+  }
+
+  &--fade-out {
+    animation: fade-out $transition 1 forwards;
+
+    .modal {
+      &__content {
+        animation: slide-out $transition * 1.5 ease-out forwards;
+      }
+    }
+  }
+}

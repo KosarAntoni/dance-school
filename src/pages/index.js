@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import Button from 'atoms/Button';
 import Link from 'atoms/Link';
+import Modal from 'atoms/Modal';
 import Typography from 'atoms/Typography';
 
 // styles
@@ -131,6 +132,8 @@ const links = [
 
 // markup
 const IndexPage = () => {
+  const modal = React.useRef(null);
+
   return (
     <main style={pageStyles} className="background--light-gray">
       <Typography size={{ base: 20, md: 24 }}>Test</Typography>
@@ -140,8 +143,8 @@ const IndexPage = () => {
       <Button variant="solid" padding="md" color="black">
         TEST BUTTON
       </Button>
-      <Button variant="solid" padding="md" color="blue">
-        TEST BUTTON
+      <Button variant="solid" padding="md" color="blue" onClick={() => modal.current.open()}>
+        open modal
       </Button>
       <Button variant="outline" padding="md" color="white">
         TEST BUTTON
@@ -172,6 +175,23 @@ const IndexPage = () => {
           TEST LINK
         </Link>
       </div>
+      <Modal ref={modal}>
+        <h1 style={headingStyles}>
+          Congratulations
+          <br />
+          <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
+          <span role="img" aria-label="Party popper emojis">
+            🎉🎉🎉
+          </span>
+        </h1>
+        <p style={paragraphStyles}>
+          Edit <code style={codeStyles}>src/pages/index.js</code> to see this page update in
+          real-time.{' '}
+          <span role="img" aria-label="Sunglasses smiley emoji">
+            😎
+          </span>
+        </p>
+      </Modal>
       <title>Home Page</title>
       <h1 style={headingStyles}>
         Congratulations
