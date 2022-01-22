@@ -2,21 +2,21 @@
 
 @keyframes fade-in {
   0% {
-    background-color: transparent;
+    opacity: 0;
   }
 
   100% {
-    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
   }
 }
 
 @keyframes fade-out {
   0% {
-    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
   }
 
   100% {
-    background-color: transparent;
+    opacity: 0;
   }
 }
 
@@ -50,7 +50,9 @@
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
   animation: fade-in $transition 1 forwards;
+  backdrop-filter: blur(15px);
   @include center-content();
 
   &__content {
@@ -60,7 +62,7 @@
     padding: 20px;
     border-radius: 8px;
     transform: translateY(150%) rotate(5deg);
-    animation: slide-in $transition * 1.5 1 cubic-bezier(0.39, 0.8, 0.28, 1.07) forwards;
+    animation: slide-in $transition * 1.5 $transition 1 cubic-bezier(0.39, 0.8, 0.28, 1.07) forwards;
   }
 
   &__close {
@@ -71,7 +73,7 @@
   }
 
   &--fade-out {
-    animation: fade-out $transition 1 forwards;
+    animation: fade-out $transition $transition 1 linear forwards;
 
     .modal {
       &__content {

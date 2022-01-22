@@ -13,9 +13,9 @@ const testModalCLose = (node: HTMLElement) => {
   expect(node).toHaveClass('modal--fade-out');
 
   // after 0.45 second element is removed from DOM
-  expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 450);
+  expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 600);
   act(() => {
-    jest.advanceTimersByTime(450);
+    jest.advanceTimersByTime(600);
   });
   expect(node).not.toBeInTheDocument();
 };

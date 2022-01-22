@@ -9,11 +9,11 @@ exports[`the Modal component renders correctly with required and optional props 
     class="container modal__content background--white shadow--dark-green"
   >
     <button
-      class="button modal__close button--simple-blue button--around"
+      class="button modal__close button--simple-black button--around"
       type="button"
     >
       <span
-        class="typography button__content typography--line-height-normal"
+        class="typography button__content typography--size-24 typography--line-height-normal"
         data-testid="typography-item"
       >
         <svg

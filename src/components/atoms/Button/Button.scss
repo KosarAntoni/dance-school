@@ -4,6 +4,8 @@
   position: relative;
   flex-direction: row;
   cursor: pointer;
+  background: transparent;
+  border: none;
   border-radius: 8px;
   transition: background-color $transition;
   @include center-content();

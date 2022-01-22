@@ -35,7 +35,7 @@ const Modal: FC<ModalProps> = forwardRef(({ children, isOpen }, ref) => {
       if (bodyElement) bodyElement.classList.remove('scroll--prevent');
       setIsModalOpen(false);
       setIsFadeOut(false);
-    }, 450);
+    }, 600);
   }, [bodyElement]);
 
   const open = useCallback(() => {
@@ -89,7 +89,7 @@ const Modal: FC<ModalProps> = forwardRef(({ children, isOpen }, ref) => {
         gutter={false}
         className="modal__content background--white shadow--dark-green"
       >
-        <Button onClick={close} className="modal__close" variant="simple">
+        <Button onClick={close} className="modal__close" variant="simple" color="black" size={24}>
           <HiX />
         </Button>
         {children}
