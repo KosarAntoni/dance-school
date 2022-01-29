@@ -1,10 +1,7 @@
 export const typographyDefaultClassesMock = [
   'testClass',
   'typography--size-8',
-  'typography--padding-top-xl',
-  'typography--padding-right-xl',
-  'typography--padding-bottom-xl',
-  'typography--padding-left-xl',
+  'typography--padding-xl',
   'typography--line-height-big',
   'typography--align-center',
   'typography--italic',

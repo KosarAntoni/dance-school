@@ -46,6 +46,8 @@ it('Typography component renders correctly with required and optional props', ()
 
   rerender(<Typography>{TypographyChildrenMock}</Typography>);
 
+  typographyNode = screen.getByTestId('typography-item');
+
   // the component renders without classes
   expect(typographyNode).not.toHaveClass(typographyDefaultClassesMock.join(' '));
   expect(typographyNode).not.toHaveClass(typographyExtendedClassesMock.join(' '));

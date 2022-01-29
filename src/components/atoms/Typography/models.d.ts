@@ -32,7 +32,7 @@ interface SizeBreakpoints extends Partial<Record<Breakpoints, Size>> {
 }
 
 type Position = 'top' | 'right' | 'bottom' | 'left';
-type Padding = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl' | 'huge';
+type Padding = 'unset' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl' | 'huge';
 interface PaddingPosition extends Partial<Record<Position, Padding>> {}
 interface PaddingBreakpoints extends Partial<Record<Breakpoints, Padding>> {
   base: Padding;

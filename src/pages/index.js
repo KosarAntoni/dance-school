@@ -136,7 +136,15 @@ const IndexPage = () => {
 
   return (
     <main style={pageStyles} className="background--light-gray">
-      <Typography size={{ base: 20, md: 24 }}>Test</Typography>
+      <Typography size={{ base: 20, md: 24 }} padding={{ base: 'md', md: 'unset' }}>
+        Test
+      </Typography>
+      <Typography size={{ base: 20, md: 24 }} padding={{ top: { base: 'sm', md: 'xs' } }}>
+        Test 2
+      </Typography>
+      <Typography size={{ base: 20, md: 24 }} padding="md">
+        Test 2
+      </Typography>
       <Button variant="solid" padding="md" color="white">
         TEST BUTTON
       </Button>
