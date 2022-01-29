@@ -33,6 +33,7 @@ fragment Page on Page {
     ... on Navigation {
       remoteTypeName: __typename
       remoteId: id
+      locale
       stage
     }
   }

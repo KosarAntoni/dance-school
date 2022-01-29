@@ -88,6 +88,7 @@ fragment ScheduledOperation on ScheduledOperation {
     ... on Navigation {
       remoteTypeName: __typename
       remoteId: id
+      locale
       stage
     }
     ... on Newsletter {
