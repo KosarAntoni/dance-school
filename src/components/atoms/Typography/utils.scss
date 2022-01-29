@@ -1,4 +1,5 @@
 // Variables
+
 $lineHeightsMap: (
   big: 1.3,
   normal: 1.1,
@@ -6,6 +7,7 @@ $lineHeightsMap: (
 );
 
 $paddingsMap: (
+  unset: unset,
   xxs: $gap-xxsmall,
   xs: $gap-xsmall,
   sm: $gap-small,
@@ -32,8 +34,15 @@ $alignsList: 'inherit', 'left', 'center', 'right';
 }
 
 @mixin padding($breakpoint: 'none') {
-  @each $side in $sidesList {
-    @if $breakpoint != 'none' {
+  @if $breakpoint != 'none' {
+    @each $size, $value in $paddingsMap {
+      .typography--padding-#{$breakpoint}-#{$size} {
+        @include breakpoint(#{$breakpoint}-up) {
+          padding: map-get($paddingsMap, $size);
+        }
+      }
+    }
+    @each $side in $sidesList {
       @each $size, $value in $paddingsMap {
         .typography--padding-#{$side}-#{$breakpoint}-#{$size} {
           @include breakpoint(#{$breakpoint}-up) {
@@ -41,7 +50,14 @@ $alignsList: 'inherit', 'left', 'center', 'right';
           }
         }
       }
-    } @else {
+    }
+  } @else {
+    @each $size, $value in $paddingsMap {
+      .typography--padding-#{$size} {
+        padding: map-get($paddingsMap, $size);
+      }
+    }
+    @each $side in $sidesList {
       @each $size, $value in $paddingsMap {
         .typography--padding-#{$side}-#{$size} {
           padding-#{$side}: map-get($paddingsMap, $size);

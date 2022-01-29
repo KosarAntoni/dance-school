@@ -20,7 +20,7 @@ import './Typography.scss';
  * </Typography>
  */
 const Typography: FC<TypographyProps> = ({
-  as /** 'h1' | 'h2' | 'h3' | 'p' | 'span' */,
+  as /** 'h1' | 'h2' | 'h3' | 'p' | 'span' | 'div */,
   align /** 'inherit' | 'left' | 'center' | 'right' | { @requires base: value, @optional breakpoint: value} */,
   lineHeight = 'normal' /** 'small' | 'normal' | 'big' */,
   weight /** 'light' | 'bold' | 'black' */,
@@ -32,7 +32,7 @@ const Typography: FC<TypographyProps> = ({
   children,
   ...rest
 }) => {
-  const Component = as || 'p';
+  const Component = as || 'span';
 
   const sizeClasses = size ? sizeClassNames(size) : [];
   const paddingClasses = padding ? paddingClassNames(padding) : [];
