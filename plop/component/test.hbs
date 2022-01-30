@@ -1,0 +1,27 @@
+import React from 'react';
+import { render, screen } from 'testUtils';
+
+{{#if mock}}
+import { {{properCase name}}DefaultPropsMock } from '../__mock__/mock';
+{{/if}}
+import {{properCase name}} from '../{{properCase name}}';
+
+{{#if mock}}
+import { {{properCase name}}Props } from '../models';
+
+const defaultProps: {{properCase name}}Props = {
+  ...{{properCase name}}DefaultPropsMock,
+};
+
+{{/if}}
+test('the {{properCase name}} component renders correctly with required and optional props', () => {
+  render(<{{properCase name}}{{#if mock}} {...defaultProps}{{/if}} />);
+
+  const {{camelCase name}}Node = screen.getByTestId('{{dashCase name}}-item');
+
+  // the component has been rendered
+  expect({{camelCase name}}Node).toBeInTheDocument();
+
+  // generating a snapshot, not for testing purposes but only to see what changes in the HTML structure during CR if the developer updates the snapshot
+  expect({{camelCase name}}Node).toMatchSnapshot();
+});
