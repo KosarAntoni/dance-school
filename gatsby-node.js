@@ -14,6 +14,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         styles: path.resolve(PROJECT_ROOT, 'src/styles'),
         mocks: path.resolve(PROJECT_ROOT, 'src/mocks'),
         utils: path.resolve(PROJECT_ROOT, 'src/utils'),
+        types: path.resolve(PROJECT_ROOT, 'src/types'),
         testUtils: path.resolve(PROJECT_ROOT, 'src/testUtils'),
         hooks: path.resolve(PROJECT_ROOT, 'src/hooks'),
         shared: path.resolve(PROJECT_ROOT, 'src/shared'),

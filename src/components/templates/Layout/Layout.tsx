@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 
+import Footer from 'organisms/Footer';
+
 import { LayoutProps } from './models';
 
 import 'styles/main.scss';
@@ -14,6 +16,7 @@ const Layout: FC<LayoutProps> = ({ children, className }) => {
       <main id="main" className="layout__main">
         {children}
       </main>
+      <Footer />
     </div>
   );
 };

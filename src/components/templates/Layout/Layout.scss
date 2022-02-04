@@ -1,6 +1,13 @@
+@import 'styles/component-set.scss';
+
 .layout {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+
+  &__main {
+    z-index: map-get($z-index, 'ground');
+    margin: 0 0 auto;
+  }
 }

@@ -7,6 +7,10 @@
     color: $c-black;
   }
 
+  &--almost-black {
+    color: $c-almost-black;
+  }
+
   &--red {
     color: $c-red;
   }
@@ -15,12 +19,16 @@
     color: $c-green;
   }
 
-  &--patel-blue {
+  &--pastel-blue {
     color: $c-pastel-blue;
   }
 
   &--light-gray {
     color: $c-light-gray;
+  }
+
+  &--gray {
+    color: $c-gray;
   }
 
   &--dark-gray {

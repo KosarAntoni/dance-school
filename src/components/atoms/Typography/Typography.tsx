@@ -28,7 +28,6 @@ const Typography: FC<TypographyProps> = ({
   size /** 8 | 10 | 12 | 14 | 15 | 16 | 17 | 18 | 20 | 24 | 25 | 28 | 30 | 35 | 40 | 42 | 50 | 55 | 65 | { @requires base: value, @optional breakpoint: value} */,
   padding /** based on varables placed in "styles/common/variables" 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl' | 'huge' | { top: value, right: value, bottom: value, left: value } | { side: { @requires base: value, @optional breakpoint: value} } */,
   className /** string */,
-  dangerouslySetInnerHTML /** string */,
   children,
   ...rest
 }) => {

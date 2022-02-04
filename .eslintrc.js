@@ -1,11 +1,18 @@
 module.exports = {
+  root: true,
+  parser: '@typescript-eslint/parser',
+  plugins: ['react', 'simple-import-sort', '@typescript-eslint', 'jest'],
   env: {
     browser: true,
     es2021: true,
     'jest/globals': true,
   },
-  extends: ['plugin:react/recommended', 'airbnb', 'plugin:prettier/recommended'],
-  parser: '@typescript-eslint/parser',
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
+    'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -13,8 +20,10 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'simple-import-sort', '@typescript-eslint', 'jest'],
   rules: {
+    'no-shadow': 0,
+    '@typescript-eslint/no-var-requires': 0,
+    '@typescript-eslint/no-namespace': 0,
     'react/prop-types': 0,
     'jsx-a11y/anchor-is-valid': [
       2,
@@ -60,7 +69,8 @@ module.exports = {
           // Then parent and siblings - order is kept thanks to alphabetical sorting.
           ['^\\.'],
           // Models import
-          ['models(.*|$)'],
+
+          ['^types(/.*|$)', 'models(.*|$)'],
           // Style imports.
           ['^.+\\.s?css$'],
         ],

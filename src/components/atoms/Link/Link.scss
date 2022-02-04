@@ -17,7 +17,7 @@
     margin-left: 0.2em;
     overflow: hidden;
 
-    @include center-content();
+    @include flex-center();
 
     &--visible,
     &--hidden {
@@ -90,6 +90,17 @@
         background-color: lighten($c-pastel-blue, 25);
       }
     }
+
+    &-gray {
+      @extend .link--solid;
+
+      color: $c-gray;
+
+      &:hover,
+      &:focus {
+        background-color: lighten($c-gray, 50);
+      }
+    }
   }
 
   &--simple {
@@ -98,7 +109,7 @@
 
       &:hover,
       &:focus {
-        color: darken($c-white, 5);
+        color: darken($c-white, 10);
       }
     }
 
@@ -117,6 +128,15 @@
       &:hover,
       &:focus {
         color: lighten($c-pastel-blue, 5);
+      }
+    }
+
+    &-gray {
+      color: $c-gray;
+
+      &:hover,
+      &:focus {
+        color: lighten($c-gray, 50);
       }
     }
   }

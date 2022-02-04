@@ -4,7 +4,7 @@
   font-size: calc(($target / $context) * 1rem);
 }
 
-@mixin center-content {
+@mixin flex-center {
   display: flex;
   align-items: center;
   justify-content: center;

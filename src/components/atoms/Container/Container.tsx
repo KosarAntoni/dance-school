@@ -3,8 +3,10 @@ import classnames from 'classnames';
 
 import { ContainerProps } from './models';
 
+import './Container.scss';
+
 const Container: FC<ContainerProps> = ({
-  element,
+  as,
   className,
   variant,
   gutter = true,
@@ -12,7 +14,7 @@ const Container: FC<ContainerProps> = ({
   children,
   ...rest
 }) => {
-  const Tag = element || 'div';
+  const Tag = as || 'div';
 
   return (
     <Tag

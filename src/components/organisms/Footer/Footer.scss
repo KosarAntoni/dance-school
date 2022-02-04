@@ -1,0 +1,29 @@
+@import 'styles/component-set.scss';
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: map-get($z-index, 'underGround');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @include breakpoint(md-up) {
+    align-items: center;
+  }
+
+  &__links,
+  &__social-links {
+    display: grid;
+    width: fit-content;
+    margin-bottom: 25px;
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr;
+  }
+}

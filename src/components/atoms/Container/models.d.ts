@@ -1,7 +1,7 @@
 import { ElementType, RefObject } from 'react';
 
 export interface ContainerProps {
-  element?: ElementType;
+  as?: ElementType;
   className?: string;
   gutter?: boolean;
   variant?: 'wide' | 'fluid' | string;
