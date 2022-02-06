@@ -1,4 +1,9 @@
-@import 'styles/component-set.scss';
+@use 'sass:color';
+@import 'styles/component-set';
+
+%solid {
+  border-radius: 8px;
+}
 
 .link {
   text-align: left;
@@ -17,7 +22,7 @@
     margin-left: 0.2em;
     overflow: hidden;
 
-    @include flex-center();
+    @include flex-center;
 
     &--visible,
     &--hidden {
@@ -37,7 +42,8 @@
     }
   }
 
-  &:hover {
+  &:not(.link--no-hover):hover,
+  &:not(.link--no-hover):focus {
     .link__arrow {
       &--visible {
         opacity: 0;
@@ -56,49 +62,47 @@
   }
 
   &--solid {
-    border-radius: 8px;
-
     &-white {
-      @extend .link--solid;
+      @extend %solid;
 
       color: $c-white;
 
-      &:hover,
-      &:focus {
-        background-color: darken($c-white, 15);
+      &:not(.link--no-hover):hover,
+      &:not(.link--no-hover):focus {
+        background-color: color.adjust($c-white, $lightness: -15%);
       }
     }
 
     &-black {
-      @extend .link--solid;
+      @extend %solid;
 
       color: $c-black;
 
-      &:hover,
-      &:focus {
-        background-color: lighten($c-black, 85);
+      &:not(.link--no-hover):hover,
+      &:not(.link--no-hover):focus {
+        background-color: color.adjust($c-black, $lightness: 85%);
       }
     }
 
     &-blue {
-      @extend .link--solid;
+      @extend %solid;
 
       color: $c-pastel-blue;
 
-      &:hover,
-      &:focus {
-        background-color: lighten($c-pastel-blue, 25);
+      &:not(.link--no-hover):hover,
+      &:not(.link--no-hover):focus {
+        background-color: color.adjust($c-pastel-blue, $lightness: 25%);
       }
     }
 
     &-gray {
-      @extend .link--solid;
+      @extend %solid;
 
       color: $c-gray;
 
-      &:hover,
-      &:focus {
-        background-color: lighten($c-gray, 50);
+      &:not(.link--no-hover):hover,
+      &:not(.link--no-hover):focus {
+        background-color: color.adjust($c-gray, $lightness: 50%);
       }
     }
   }
@@ -107,43 +111,37 @@
     &-white {
       color: $c-white;
 
-      &:hover,
-      &:focus {
-        color: darken($c-white, 10);
+      &:not(.link--no-hover):hover,
+      &:not(.link--no-hover):focus {
+        color: color.adjust($c-white, $lightness: -10%);
       }
     }
 
     &-black {
       color: $c-black;
 
-      &:hover,
-      &:focus {
-        color: lighten($c-black, 25);
+      &:not(.link--no-hover):hover,
+      &:not(.link--no-hover):focus {
+        color: color.adjust($c-black, $lightness: 25%);
       }
     }
 
     &-blue {
       color: $c-pastel-blue;
 
-      &:hover,
-      &:focus {
-        color: lighten($c-pastel-blue, 5);
+      &:not(.link--no-hover):hover,
+      &:not(.link--no-hover):focus {
+        color: color.adjust($c-pastel-blue, $lightness: 5%);
       }
     }
 
     &-gray {
       color: $c-gray;
 
-      &:hover,
-      &:focus {
-        color: lighten($c-gray, 50);
+      &:not(.link--no-hover):hover,
+      &:not(.link--no-hover):focus {
+        color: color.adjust($c-gray, $lightness: 50%);
       }
-    }
-  }
-
-  &--no-hover {
-    &:hover {
-      color: inherit;
     }
   }
 }

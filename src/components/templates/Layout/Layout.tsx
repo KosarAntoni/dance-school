@@ -9,11 +9,11 @@ import 'styles/main.scss';
 import './Layout.scss';
 
 const Layout: FC<LayoutProps> = ({ children, className }) => {
-  const layoutClasses = classNames('layout', 'background--white', className);
+  const layoutClasses = classNames('layout', className);
 
   return (
     <div className={layoutClasses}>
-      <main id="main" className="layout__main">
+      <main id="main" className="layout__main background--white">
         {children}
       </main>
       <Footer />

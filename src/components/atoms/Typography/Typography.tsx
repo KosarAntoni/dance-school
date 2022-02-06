@@ -31,7 +31,7 @@ const Typography: FC<TypographyProps> = ({
   children,
   ...rest
 }) => {
-  const Component = as || 'span';
+  const Component = as || 'div';
 
   const sizeClasses = size ? sizeClassNames(size) : [];
   const paddingClasses = padding ? paddingClassNames(padding) : [];
@@ -47,6 +47,7 @@ const Typography: FC<TypographyProps> = ({
       [`typography--line-height-${lineHeight}`]: lineHeight,
       [`typography--${weight}`]: weight,
       'typography--italic': italic,
+      'typography--heading': as?.toString().charAt(0) === 'h',
     }
   );
 

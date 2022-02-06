@@ -1,4 +1,6 @@
-@import './variables.scss';
+@use 'sass:map';
+@use 'sass:string';
+@import './variables';
 
 @mixin font-size($target, $context: $font-size-base) {
   font-size: calc(($target / $context) * 1rem);
@@ -15,19 +17,19 @@
   $query-point: '';
   $query-size: '';
 
-  @if str-index($point, '-up') {
+  @if string.index($point, '-up') {
     $query-direction: 'min-width';
-    $query-point: str-slice($point, 0, str-length($point) - str-length('-up'));
-    $query-size: map-get($breakpoints, $query-point);
+    $query-point: string.slice($point, 0, string.length($point) - string.length('-up'));
+    $query-size: map.get($breakpoints, $query-point);
   } @else {
-    @if str-index($point, '-down') {
-      $query-point: str-slice($point, 0, str-length($point) - str-length('-down'));
+    @if string.index($point, '-down') {
+      $query-point: string.slice($point, 0, string.length($point) - string.length('-down'));
     } @else {
       $query-point: $point;
     }
 
     $query-direction: 'max-width';
-    $query-size: map-get($breakpoints, $query-point) - 1px;
+    $query-size: map.get($breakpoints, $query-point) - 1px;
   }
 
   @media screen and (#{$query-direction}: #{$query-size}) {

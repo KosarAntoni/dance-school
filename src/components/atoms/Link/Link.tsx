@@ -14,6 +14,7 @@ const Link: FC<LinkProps> = ({
   color = 'black',
   variant = 'simple',
   hasArrow,
+  noHover,
   className,
   onClick,
   url,
@@ -29,7 +30,7 @@ const Link: FC<LinkProps> = ({
     'link',
     {
       [`link--${variant}-${color}`]: variant && color,
-      'link--no-hover': url === '#' || !url,
+      'link--no-hover': url === '#' || !url || noHover,
     },
     className
   );

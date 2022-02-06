@@ -135,8 +135,8 @@ const IndexPage = () => {
   const modal = React.useRef(null);
 
   return (
-    <main style={pageStyles} className="background--light-gray">
-      <Typography size={{ base: 20, md: 24 }} padding={{ base: 'md', md: 'unset' }}>
+    <main style={pageStyles}>
+      <Typography as="h1" size={{ base: 20, md: 24 }} padding={{ base: 'md', md: 'unset' }}>
         Test
       </Typography>
       <Typography size={{ base: 20, md: 24 }} padding={{ top: { base: 'sm', md: 'xs' } }}>

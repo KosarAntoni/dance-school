@@ -16,6 +16,8 @@
     "clean:all": "rimraf node_modules public graphcms-fragments .cache && rimraf node_modules",
     "clean:cache": "rimraf public .cache graphcms-fragments",
     "lint": "eslint . -c .eslintrc.js . --ext .js,.ts,.jsx,.tsx",
+    "lint:style": "stylelint **/*.{css,scss,sass}",
+    "lint:all": "yarn lint & yarn lint:style",
     "lint:fix": "yarn lint --fix",
     "test": "yarn jest",
     "format": "prettier \"**/*.{js,jsx,ts,tsx,md,json}\"",
@@ -74,12 +76,11 @@
     "plop": "^3.0.5",
     "prettier": "2.5.1",
     "rimraf": "^3.0.2",
-    "stylelint": "^14.2.0",
+    "stylelint": "^14.3.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^24.0.0",
+    "stylelint-config-standard-scss": "^3.0.0",
     "stylelint-order": "^5.0.0",
-    "stylelint-prettier": "^2.0.0",
-    "stylelint-scss": "^4.1.0",
     "typescript": "^4.5.4"
   },
   "lint-staged": {

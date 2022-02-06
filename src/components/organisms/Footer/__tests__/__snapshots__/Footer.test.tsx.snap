@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the Footer component renders correctly with required and optional props 1`] = `
-<footer
-  class="container footer background--almost-black container--fluid container--gutter"
+<div
+  class="container__inner footer"
   data-testid="footer-item"
 >
   <div
@@ -113,12 +113,12 @@ exports[`the Footer component renders correctly with required and optional props
       </span>
     </a>
   </div>
-  <span
+  <div
     class="typography color--gray typography--size-12 typography--size-md-18 typography--line-height-normal"
     data-testid="typography-item"
   >
     © 
     Dance school Gdańsk | Dance Atelier Anton Kosar
-  </span>
-</footer>
+  </div>
+</div>
 `;

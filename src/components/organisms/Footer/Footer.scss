@@ -1,10 +1,8 @@
-@import 'styles/component-set.scss';
+@use 'sass:map';
+@import 'styles/component-set';
 
 .footer {
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  z-index: map-get($z-index, 'underGround');
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,6 +12,11 @@
 
   @include breakpoint(md-up) {
     align-items: center;
+  }
+
+  &__wrapper {
+    position: sticky;
+    bottom: 0;
   }
 
   &__links,

@@ -10,7 +10,7 @@ jest.spyOn(global, 'setTimeout');
 
 const testModalCLose = (node: HTMLElement) => {
   // change class after click on background
-  expect(node).toHaveClass('modal--fade-out');
+  expect(node.parentElement).toHaveClass('modal--fade-out');
 
   // after 0.45 second element is removed from DOM
   expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 600);

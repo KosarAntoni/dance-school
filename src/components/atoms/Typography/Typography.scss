@@ -1,5 +1,5 @@
-@import 'styles/component-set.scss';
-@import './utils.scss';
+@import 'styles/component-set';
+@import './utils';
 
 .typography {
   font-family: $font-base;
@@ -18,32 +18,28 @@
   &--italic {
     font-style: italic;
   }
+
+  &--heading {
+    font-family: $font-heading;
+    font-weight: 700;
+  }
 }
 
-.heading {
-  font-family: $font-heading;
-  letter-spacing: 0.064rem;
-  @extend .typography;
-}
+@include line-height;
 
-@include lineHeight('big');
-@include lineHeight('normal');
-@include lineHeight('small');
-@include heading();
-
-@include align();
+@include align;
 
 @each $breakpoint in map-keys($breakpoints) {
   @include align($breakpoint);
 }
 
-@include padding();
+@include padding;
 
 @each $breakpoint in map-keys($breakpoints) {
   @include padding($breakpoint);
 }
 
-@include size();
+@include size;
 
 @each $breakpoint in map-keys($breakpoints) {
   @include size($breakpoint);

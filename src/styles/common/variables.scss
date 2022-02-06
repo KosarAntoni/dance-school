@@ -5,10 +5,8 @@
 
 $font-nato: sans-serif;
 $font-lilita: sans-serif;
-
 $font-heading: $font-lilita;
 $font-base: $font-nato;
-
 $font-size-base: 16;
 
 /* Wrappers
@@ -29,25 +27,25 @@ $gap-xlarge: 32px;
 $gap-xxlarge: 48px;
 $gap-xxxlarge: 60px;
 $gap-huge: 70px;
-
 $gap-default: $gap-regular;
 
 /* Misc
 ************************************************************** */
 
 $transition: 0.3s;
+$navigation-height: 96px;
 
 /* Z-index
 ************************************************************** */
 
 $z-index: (
-  underGround: -1,
+  underground: -1,
   ground: 1,
-  overGround: 2,
-  header: 11,
-  underHeader: 10,
-  overHeader: 12,
-  modalOverlay: 9998,
+  overground: 2,
+  navigation: 11,
+  undernavigation: 10,
+  overnavigation: 12,
+  modaloverlay: 9998,
   modal: 9999,
 );
 

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { FaFacebookF } from '@react-icons/all-files/fa/FaFacebookF';
 import { FaInstagram } from '@react-icons/all-files/fa/FaInstagram';
 import { FaYoutube } from '@react-icons/all-files/fa/FaYoutube';
@@ -54,8 +54,8 @@ const Footer = () => {
   return (
     <Container
       as="footer"
-      variant="fluid"
-      className="footer background--almost-black"
+      className="footer__wrapper background--almost-black"
+      innerClassName="footer"
       data-testid="footer-item"
     >
       <div className="footer__links">{renderLinks}</div>

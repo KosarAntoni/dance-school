@@ -1,62 +1,17 @@
 module.exports = {
-  plugins: ['stylelint-order', 'stylelint-scss', 'stylelint-prettier'],
-  extends: ['stylelint-prettier/recommended'],
+  plugins: ['stylelint-order'],
+  extends: [
+    'stylelint-config-standard',
+    'stylelint-config-standard-scss',
+    'stylelint-config-prettier',
+  ],
   rules: {
-    'at-rule-no-unknown': [
-      true,
-      {
-        ignoreAtRules: [
-          'include',
-          'mixin',
-          'function',
-          'if',
-          'else',
-          'return',
-          'each',
-          'extend',
-          'for',
-        ],
-      },
-    ],
-    'at-rule-empty-line-before': [
-      'always',
-      {
-        ignore: [
-          'after-comment',
-          'inside-block',
-          'blockless-after-same-name-blockless',
-          'blockless-after-blockless',
-        ],
-      },
-    ],
-    'at-rule-no-vendor-prefix': true,
-    'block-closing-brace-newline-after': [
-      'always',
-      {
-        ignoreAtRules: ['if', 'else'],
-      },
-    ],
-    'block-no-empty': true,
+    'selector-class-pattern':
+      '^(?:(?:o|c|u|t|s|is|has|_|js|qa)-)?[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*(?:__[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:--[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:\\[.+\\])?$',
     'color-hex-case': 'lower',
     'font-family-name-quotes': 'always-where-recommended',
-    'function-name-case': null,
-    'media-feature-name-no-vendor-prefix': true,
-    'no-descending-specificity': null,
-    'no-duplicate-selectors': null,
-    'property-no-vendor-prefix': true,
-    'rule-empty-line-before': [
-      'always',
-      {
-        ignore: ['after-comment', 'first-nested'],
-      },
-    ],
-    'selector-no-vendor-prefix': true,
-    'selector-pseudo-class-no-unknown': true,
+    'function-name-case': 'lower',
     'string-quotes': 'single',
-    'value-keyword-case': null,
-    'value-no-vendor-prefix': true,
-    indentation: 2,
-    'prettier/prettier': true,
     'order/properties-order': [
       [
         'font',

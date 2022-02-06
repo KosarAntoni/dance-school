@@ -1,17 +1,28 @@
-@import 'styles/component-set.scss';
+@import 'styles/component-set';
 
 .container {
   width: 100%;
-  max-width: $wrapper-default;
-  margin-right: auto;
-  margin-left: auto;
+
+  &__inner {
+    max-width: $wrapper-default;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
   &--fluid {
-    max-width: 100%;
+    &.container {
+      &__inner {
+        max-width: 100%;
+      }
+    }
   }
 
   &--wide {
-    max-width: $wrapper-wide;
+    &.container {
+      &__inner {
+        max-width: $wrapper-wide;
+      }
+    }
   }
 
   &--gutter {

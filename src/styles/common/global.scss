@@ -1,13 +1,11 @@
 @import './mixins';
+@import './colors';
 
 * {
   box-sizing: border-box;
 }
 
 html {
+  background-color: $c-page-background;
   @include font-size(16);
-}
-
-body {
-  overflow-x: hidden;
 }

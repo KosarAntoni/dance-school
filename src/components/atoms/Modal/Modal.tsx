@@ -84,8 +84,15 @@ const Modal: FC<ModalProps> = forwardRef(({ children, isOpen }, ref) => {
 
   const renderModal = isModalOpen ? (
     <Container variant="fluid" className={modalClasses} data-testid="modal-item">
-      <Container innerRef={contentRef} gutter={false} className="modal__content background--white">
-        <Button onClick={close} className="modal__close" variant="simple" color="black" size={24}>
+      <Container innerRef={contentRef} gutter={false} className="modal__inner background--white">
+        <Button
+          onClick={close}
+          className="modal__close"
+          variant="solid"
+          color="black"
+          size={18}
+          padding="xs"
+        >
           <HiX />
         </Button>
         {children}

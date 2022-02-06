@@ -1,13 +1,15 @@
-@import 'styles/component-set.scss';
+@use 'sass:map';
+@import 'styles/component-set';
 
 .layout {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  min-height: 100vh;
 
   &__main {
-    z-index: map-get($z-index, 'ground');
+    z-index: map.get($z-index, 'ground');
     margin: 0 0 auto;
   }
 }

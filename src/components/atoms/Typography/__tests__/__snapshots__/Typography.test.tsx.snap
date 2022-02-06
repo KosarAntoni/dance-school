@@ -2,7 +2,7 @@
 
 exports[`Typography component renders correctly with required and optional props 1`] = `
 <h1
-  class="typography testClass typography--size-8 typography--padding-xl typography--align-center typography--line-height-big typography--bold typography--italic"
+  class="typography testClass typography--size-8 typography--padding-xl typography--align-center typography--line-height-big typography--bold typography--italic typography--heading"
   data-testid="typography-item"
 >
   Test Lorem Ipsum
