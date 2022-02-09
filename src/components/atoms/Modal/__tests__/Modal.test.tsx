@@ -1,6 +1,7 @@
 import React from 'react';
 import { act } from 'react-dom/test-utils';
 import { fireEvent, render, screen } from '@testing-library/react';
+import { createModalRoot } from 'testUtils/createModalRoot';
 
 import { ModalSetters } from '..';
 import Modal from '../Modal';
@@ -8,7 +9,7 @@ import Modal from '../Modal';
 jest.useFakeTimers();
 jest.spyOn(global, 'setTimeout');
 
-const testModalCLose = (node: HTMLElement) => {
+export const testModalCLose = (node: HTMLElement): void => {
   // change class after click on background
   expect(node.parentElement).toHaveClass('modal--fade-out');
 
@@ -21,11 +22,7 @@ const testModalCLose = (node: HTMLElement) => {
 };
 
 test('the Modal component renders correctly with required and optional props', () => {
-  // add a div with #modal-root id to the global body
-  const modalRoot = global.document.createElement('div');
-  modalRoot.setAttribute('id', 'modal-root');
-  const body = global.document.querySelector('body');
-  if (body) body.appendChild(modalRoot);
+  createModalRoot();
 
   // create element ref to test forwardRef hook
   const modalRef = React.createRef<ModalSetters>();
@@ -71,6 +68,6 @@ test('the Modal component renders correctly with required and optional props', (
   });
 
   // modal closes after press on Escape key
-  fireEvent.keyDown(modalRoot, { key: 'Escape', keyCode: 27 });
+  fireEvent.keyDown(document, { key: 'Escape', keyCode: 27 });
   testModalCLose(modalNode);
 });

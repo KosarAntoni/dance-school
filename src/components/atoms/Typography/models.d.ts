@@ -27,24 +27,24 @@ type Size =
   | 55
   | 65
   | number;
-interface SizeBreakpoints extends Partial<Record<Breakpoints, Size>> {
+type SizeBreakpoints = {
   base: Size;
-}
+} & Partial<Record<Breakpoints, Size>>;
 
 type Position = 'top' | 'right' | 'bottom' | 'left';
 type Padding = 'unset' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl' | 'huge';
 type PaddingPosition = Partial<Record<Position, Padding>>;
-interface PaddingBreakpoints extends Partial<Record<Breakpoints, Padding>> {
+type PaddingBreakpoints = {
   base: Padding;
-}
+} & Partial<Record<Breakpoints, Padding>>;
 type PaddingBreakpointsPosition = Partial<Record<Position, PaddingBreakpoints>>;
 
 type Align = 'inherit' | 'left' | 'center' | 'right';
-interface AlignBreakpoints extends Partial<Record<Breakpoints, Align>> {
+type AlignBreakpoints = {
   base: Align;
-}
+} & Partial<Record<Breakpoints, Align>>;
 
-export interface TypographyProps {
+export type TypographyProps = {
   size?: Size | SizeBreakpoints;
   padding?: Padding | PaddingPosition | PaddingBreakpointsPosition;
   align?: Align | AlignBreakpoints;
@@ -54,4 +54,4 @@ export interface TypographyProps {
   weight?: FontWeight;
   italic?: boolean;
   dangerouslySetInnerHTML?: string;
-}
+};

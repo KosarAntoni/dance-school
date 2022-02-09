@@ -1,8 +1,6 @@
 import * as Gatsby from 'gatsby';
 
-const useStaticQueryMock = (mock) => {
+export const useStaticQueryMock = (mock): void => {
   const useStaticQuery = jest.spyOn(Gatsby, 'useStaticQuery');
   useStaticQuery.mockImplementation(() => mock);
 };
-
-export default useStaticQueryMock;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { FaFacebookF } from '@react-icons/all-files/fa/FaFacebookF';
 import { FaInstagram } from '@react-icons/all-files/fa/FaInstagram';
 import { FaYoutube } from '@react-icons/all-files/fa/FaYoutube';
@@ -15,7 +15,7 @@ import './Footer.scss';
 
 const { FACEBOOK, INSTAGRAM, YOUTUBE } = socialLinkTheme;
 
-const Footer = () => {
+const Footer: FC = () => {
   const nodes = useFooterQuery();
   const lang = process.env.GATSBY_DEFAULT_LANG;
   const [footerData] = nodes.filter(({ locale }) => locale === lang);

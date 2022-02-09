@@ -1,0 +1,15 @@
+@import 'styles/component-set';
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &--hidden-icon {
+    .logo {
+      &__icon {
+        visibility: hidden;
+      }
+    }
+  }
+}

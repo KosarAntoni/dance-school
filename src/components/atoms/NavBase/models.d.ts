@@ -1,5 +1,5 @@
 type NavBaseStringNodes = 'url' | 'queryString' | 'className' | 'ariaLabel';
 
-export interface NavBaseProps extends Partial<Record<NavBaseStringNodes, string>> {
+export type NavBaseProps = {
   onClick?: () => void;
-}
+} & Partial<Record<NavBaseStringNodes, string>>;

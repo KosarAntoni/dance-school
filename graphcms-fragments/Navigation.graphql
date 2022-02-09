@@ -28,8 +28,24 @@ fragment Navigation on Navigation {
       stage
     }
   }
+  logoLink {
+    ... on Link {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+      stage
+    }
+  }
   pages {
     ... on Page {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+      stage
+    }
+  }
+  menuButton {
+    ... on Button {
       remoteTypeName: __typename
       remoteId: id
       locale

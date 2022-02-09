@@ -1,0 +1,76 @@
+@use 'sass:map';
+@import 'styles/component-set';
+
+$animated-count: 10;
+
+.navigation {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(#{$navigation-height} / 2);
+  padding-top: calc(#{$navigation-height} / 4);
+
+  @include breakpoint(lg-up) {
+    height: $navigation-height;
+    padding-top: calc(#{$navigation-height} / 2);
+  }
+
+  &__wrapper {
+    position: sticky;
+    top: 0;
+    z-index: map.get($z-index, 'navigation');
+  }
+
+  &__menu-button {
+    position: absolute;
+    right: 0;
+
+    @include breakpoint(lg-up) {
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity $transition, backgound-color $transition, color $transition,
+        background-color $transition;
+    }
+  }
+
+  @for $i from 1 through $animated-count {
+    .navigation__item-#{$i} {
+      visibility: hidden;
+
+      @include breakpoint(lg-up) {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        transition: transform $transition calc(#{$transition} / 2 * #{$i}),
+          opacity $transition calc(#{$transition} / 2 * #{$i});
+      }
+    }
+  }
+
+  &--scrolled {
+    @for $i from 1 through $animated-count {
+      .navigation__item-#{$i} {
+        @include breakpoint(lg-up) {
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(20%);
+          transition: transform $transition $transition, opacity $transition $transition,
+            visibility 0s calc(#{$transition} * 2);
+        }
+      }
+    }
+
+    .navigation {
+      &__menu-button {
+        @include breakpoint(lg-up) {
+          pointer-events: all;
+          opacity: 1;
+          transition: opacity $transition calc(#{$transition} * 2), color $transition,
+            background-color $transition;
+        }
+      }
+    }
+  }
+}

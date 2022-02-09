@@ -1,16 +1,24 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-export const useNavigationQuery = () => {
+import { navigationQueryType } from './models';
+
+export const useNavigationQuery = (): navigationQueryType[] => {
   const {
     allGraphCmsNavigation: { nodes },
   } = useStaticQuery(graphql`
     {
       allGraphCmsNavigation {
         nodes {
+          logoLink {
+            ...Link
+          }
           pages {
             url
             title
             slug
+          }
+          menuButton {
+            ...Button
           }
           locale
         }

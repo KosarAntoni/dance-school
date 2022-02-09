@@ -1,6 +1,8 @@
 @use 'sass:color';
 @import 'styles/component-set';
 
+$border-radius: 8px;
+
 %outline {
   transition: opacity $transition, color $transition, background-color $transition;
 
@@ -8,9 +10,9 @@
     color: inherit;
     position: absolute;
     display: inherit;
-    width: calc(100%);
-    height: calc(100%);
-    border-radius: inherit;
+    width: calc(100% - #{$border-radius} / 2);
+    height: calc(100% - #{$border-radius} / 2);
+    border-radius: calc(#{$border-radius} - 1px);
     content: '';
   }
 }
@@ -44,7 +46,7 @@
   cursor: pointer;
   background: transparent;
   border: none;
-  border-radius: 8px;
+  border-radius: $border-radius;
   transition: background-color $transition;
   @include flex-center;
 
@@ -113,7 +115,7 @@
       background-color: $c-white;
 
       &::after {
-        box-shadow: $c-black 0 0 0 2px inset;
+        border: 2px solid $c-black;
       }
 
       &:hover,
@@ -130,7 +132,7 @@
       background-color: $c-black;
 
       &::after {
-        box-shadow: $c-white 0 0 0 2px inset;
+        border: 2px solid $c-white;
       }
 
       &:hover,
@@ -147,7 +149,7 @@
       background-color: $c-pastel-blue;
 
       &::after {
-        box-shadow: $c-white 0 0 0 2px inset;
+        border: 2px solid $c-white;
       }
 
       &:hover,

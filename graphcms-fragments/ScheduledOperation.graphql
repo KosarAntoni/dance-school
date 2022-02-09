@@ -85,6 +85,12 @@ fragment ScheduledOperation on ScheduledOperation {
       locale
       stage
     }
+    ... on Link {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+      stage
+    }
     ... on Navigation {
       remoteTypeName: __typename
       remoteId: id

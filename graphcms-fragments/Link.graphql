@@ -1,4 +1,4 @@
-fragment Button on Button {
+fragment Link on Link {
   stage
   locale
   remoteId: id
@@ -7,8 +7,10 @@ fragment Button on Button {
   publishedAt(variation: COMBINED)
   label
   slug
-  url
   ariaLabel
+  url
+  hasArrow
+  noHover
   createdBy {
     ... on User {
       remoteTypeName: __typename
@@ -27,14 +29,6 @@ fragment Button on Button {
     ... on User {
       remoteTypeName: __typename
       remoteId: id
-      stage
-    }
-  }
-  breakpoints {
-    ... on Breakpoint {
-      remoteTypeName: __typename
-      remoteId: id
-      locale
       stage
     }
   }

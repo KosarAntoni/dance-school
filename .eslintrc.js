@@ -21,9 +21,12 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'no-shadow': 0,
+    '@typescript-eslint/consistent-type-definitions': [2, 'type'],
+    '@typescript-eslint/consistent-indexed-object-style': [2, 'record'],
+    '@typescript-eslint/explicit-function-return-type': 0,
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/no-namespace': 0,
+    'no-shadow': 0,
     'react/prop-types': 0,
     'jsx-a11y/anchor-is-valid': [
       2,
@@ -82,6 +85,18 @@ module.exports = {
       files: ['*.ts', '*.tsx'],
       rules: {
         'no-undef': 0,
+      },
+    },
+    {
+      // enable the rule specifically for TypeScript files
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': [
+          'error',
+          {
+            allowExpressions: true,
+          },
+        ],
       },
     },
   ],

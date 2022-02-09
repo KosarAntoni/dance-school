@@ -1,8 +1,8 @@
-export interface ModalProps {
+export type ModalProps = {
   isOpen?: boolean;
   ref?: RefObject<HTMLElement>;
-}
-export interface ModalSetters extends HTMLElement {
+};
+export type ModalSetters = {
   open: () => void;
   close: () => void;
-}
+} & HTMLElement;

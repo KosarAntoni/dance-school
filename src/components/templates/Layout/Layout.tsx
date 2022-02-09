@@ -2,6 +2,8 @@ import React, { FC } from 'react';
 import classNames from 'classnames';
 
 import Footer from 'organisms/Footer';
+import Navigation from 'organisms/Navigation';
+import NavigationLogo from 'organisms/NavigationLogo';
 
 import { LayoutProps } from './models';
 
@@ -13,6 +15,8 @@ const Layout: FC<LayoutProps> = ({ children, className }) => {
 
   return (
     <div className={layoutClasses}>
+      <NavigationLogo />
+      <Navigation />
       <main id="main" className="layout__main background--white">
         {children}
       </main>

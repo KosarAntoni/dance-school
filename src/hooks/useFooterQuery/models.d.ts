@@ -1,8 +1,8 @@
 import { locales, pageUrl, socialLink } from 'types/commonTypes';
 
-export interface footerQueryType {
+export type footerQueryType = {
   locale: locales;
   pages: pageUrl[];
   socialLinks: socialLink[];
   copyright: string;
-}
+};

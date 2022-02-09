@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import { footerQueryType } from './models';
 
-export const useFooterQuery = () => {
+export const useFooterQuery = (): footerQueryType[] => {
   const {
     allGraphCmsFooter: { nodes },
   } = useStaticQuery(graphql`
@@ -26,5 +26,5 @@ export const useFooterQuery = () => {
     }
   `);
 
-  return nodes as footerQueryType[];
+  return nodes;
 };

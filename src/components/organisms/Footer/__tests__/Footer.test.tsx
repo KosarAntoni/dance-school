@@ -1,15 +1,11 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { FooterMock } from 'shared/mocks/footerMock';
-import useStaticQueryMock from 'testUtils/useStaticQueryMock';
+import { FooterMock } from 'shared/mocks';
+import { useStaticQueryMock } from 'testUtils/useStaticQueryMock';
 
 import Footer from '../Footer';
 
 const GATSBY_DEFAULT_LANG = 'en';
-
-const useStaticQueryReturn = {
-  ...FooterMock.useStaticQueryReturn,
-};
 
 const originalEnv = process.env;
 
@@ -26,12 +22,12 @@ afterEach(() => {
   process.env = originalEnv;
 });
 
-const [{ copyright, socialLinks, pages }] = useStaticQueryReturn.allGraphCmsFooter.nodes.filter(
+const [{ copyright, socialLinks, pages }] = FooterMock.allGraphCmsFooter.nodes.filter(
   ({ locale }) => locale === GATSBY_DEFAULT_LANG
 );
 
 test('the Footer component renders correctly with required and optional props', () => {
-  useStaticQueryMock(useStaticQueryReturn);
+  useStaticQueryMock(FooterMock);
 
   render(<Footer />);
 

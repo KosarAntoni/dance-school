@@ -36,16 +36,16 @@ fragment Newsletter on Newsletter {
       stage
     }
   }
-  blogPosts {
-    ... on BlogPost {
+  pages {
+    ... on Page {
       remoteTypeName: __typename
       remoteId: id
       locale
       stage
     }
   }
-  pages {
-    ... on Page {
+  blogPosts {
+    ... on BlogPost {
       remoteTypeName: __typename
       remoteId: id
       locale

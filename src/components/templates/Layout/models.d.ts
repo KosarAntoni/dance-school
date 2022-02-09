@@ -1,3 +1,3 @@
-export interface LayoutProps {
+export type LayoutProps = {
   className?: string;
-}
+};

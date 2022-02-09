@@ -1,0 +1,31 @@
+@use 'sass:map';
+@import 'styles/component-set';
+
+.navigation-logo {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(#{$navigation-height} / 2);
+  margin-bottom: calc(#{$navigation-height} / 2 * -1);
+  padding-top: calc(#{$navigation-height} / 4);
+
+  @include breakpoint(lg-up) {
+    height: $navigation-height;
+    margin-bottom: -$navigation-height;
+    padding-top: calc(#{$navigation-height} / 2);
+  }
+
+  &__wrapper {
+    position: sticky;
+    top: 0;
+    z-index: map.get($z-index, 'overnavigation');
+    pointer-events: none;
+    mix-blend-mode: difference;
+  }
+
+  &__icon {
+    pointer-events: all;
+  }
+}
