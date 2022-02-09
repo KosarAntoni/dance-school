@@ -8,8 +8,18 @@ import { LogoProps } from './models';
 
 import './Logo.scss';
 
-const Logo: FC<LogoProps> = ({ url, label, variant, ariaLabel, color, hasText, className }) => {
-  const logoClasses = classNames('logo', { 'logo--hidden-icon': hasText }, className);
+const Logo: FC<LogoProps> = ({
+  url,
+  label,
+  variant,
+  ariaLabel,
+  size,
+  color,
+  hasText,
+  hasIcon,
+  className,
+}) => {
+  const logoClasses = classNames('logo', { 'logo--hidden-icon': !hasIcon }, className);
 
   const renderText = hasText && (
     <Link
@@ -19,7 +29,7 @@ const Logo: FC<LogoProps> = ({ url, label, variant, ariaLabel, color, hasText, c
       noHover
       color={color}
       weight="bold"
-      size={{ base: 20, md: 24 }}
+      size={size}
       padding={{ left: 'sm' }}
       className="logo__text"
     >
@@ -35,7 +45,7 @@ const Logo: FC<LogoProps> = ({ url, label, variant, ariaLabel, color, hasText, c
         variant="simple"
         color="white"
         noHover
-        size={{ base: 20, md: 24 }}
+        size={size}
         className="logo__icon"
       >
         <GiHeartInside />

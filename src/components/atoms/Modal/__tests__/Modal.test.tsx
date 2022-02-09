@@ -9,11 +9,15 @@ import Modal from '../Modal';
 jest.useFakeTimers();
 jest.spyOn(global, 'setTimeout');
 
+afterEach(() => {
+  jest.clearAllTimers();
+});
+
 export const testModalCLose = (node: HTMLElement): void => {
-  // change class after click on background
+  // change class
   expect(node.parentElement).toHaveClass('modal--fade-out');
 
-  // after 0.45 second element is removed from DOM
+  // after 0.6 second element is removed from DOM
   expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 600);
   act(() => {
     jest.advanceTimersByTime(600);
@@ -45,7 +49,7 @@ test('the Modal component renders correctly with required and optional props', (
   expect(screen.getByText('TEST TEXT')).toBeInTheDocument();
 
   // modal closes after click on background
-  fireEvent.click(modalNode);
+  fireEvent.click(modalNode.parentElement!);
   testModalCLose(modalNode);
 
   // after ref call element is inside DOM

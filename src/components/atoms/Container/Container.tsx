@@ -16,10 +16,14 @@ const Container: FC<ContainerProps> = ({
   ...rest
 }) => {
   const Component = as || 'div';
-  const containerClassNames = classnames('container', className, {
-    [`container--${variant}`]: variant,
-    'container--gutter': gutter,
-  });
+  const containerClassNames = classnames(
+    'container',
+    {
+      [`container--${variant}`]: variant,
+      'container--gutter': gutter,
+    },
+    className
+  );
   const innerClassNames = classnames('container__inner', innerClassName);
 
   return (

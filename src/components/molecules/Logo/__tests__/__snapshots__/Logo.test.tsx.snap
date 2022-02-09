@@ -2,7 +2,7 @@
 
 exports[`the Logo component renders correctly with required and optional props 1`] = `
 <div
-  class="logo"
+  class="logo logo--hidden-icon"
   data-testid="logo-item"
 >
   <a
@@ -11,7 +11,7 @@ exports[`the Logo component renders correctly with required and optional props 1
     href="/"
   >
     <span
-      class="typography link__content typography--size-20 typography--size-md-24 typography--line-height-normal"
+      class="typography link__content typography--line-height-normal"
       data-testid="typography-item"
     >
       <svg

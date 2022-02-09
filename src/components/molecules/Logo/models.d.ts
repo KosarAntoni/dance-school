@@ -1,7 +1,9 @@
 import { LinkProps } from 'atoms/Link';
 
+type LogoBooleanProps = 'hasText' | 'hasIcon';
+
 export type LogoProps = {
   label: string;
-  hasText?: boolean;
   className?: string;
-} & LinkProps;
+} & LinkProps &
+  Partial<Record<LogoBooleanProps, boolean | undefined>>;

@@ -31,7 +31,9 @@ const Navigation: FC<NavigationProps> = ({ hasMobileOpen }) => {
     window.onscroll = () => {
       setIsScrolled(window.scrollY >= SCROLL_OFFSET);
     };
-  }, [window]);
+
+    setIsScrolled(window.scrollY >= SCROLL_OFFSET);
+  });
 
   const navigationClasses = classNames('navigation', {
     'navigation--scrolled': isScrolled,
@@ -41,13 +43,26 @@ const Navigation: FC<NavigationProps> = ({ hasMobileOpen }) => {
     if (modal.current) modal.current.open();
   };
 
-  const renderLinks = pages?.map(({ url, title }, index: number) => (
+  const renderMobileLinks = pages?.map(({ url, title }) => (
+    <Link
+      key={title}
+      url={url}
+      variant="simple"
+      color="black"
+      size={{ base: 20, lg: 24 }}
+      padding={{ bottom: 'xl' }}
+    >
+      {title}
+    </Link>
+  ));
+
+  const renderDesktopLinks = pages?.map(({ url, title }, index: number) => (
     <Link
       key={title}
       url={url}
       variant="solid"
       color="black"
-      size={{ base: 14, md: 18 }}
+      size={{ base: 14, lg: 18 }}
       padding={{ top: 'xs', right: 'sm', bottom: 'xs', left: 'sm' }}
       className={`navigation__item-${index + 2}`}
     >
@@ -62,19 +77,31 @@ const Navigation: FC<NavigationProps> = ({ hasMobileOpen }) => {
       innerClassName={navigationClasses}
       data-testid="navigation-item"
     >
-      <Logo {...logoLink} hasText className="navigation__logo navigation__item-1" />
-      <div className="navigation__links">{renderLinks}</div>
+      <Logo
+        {...logoLink}
+        size={{ base: 20, lg: 30 }}
+        hasText
+        className="navigation__logo navigation__item-1"
+      />
+      <nav className="navigation__links">{renderDesktopLinks}</nav>
       <Button
         {...menuButton}
-        size={{ base: 14, md: 18 }}
+        size={{ base: 14, lg: 24 }}
         padding="xs"
         className="navigation__menu-button"
         onClick={onMenuButtonClick}
       >
         <HiMenuAlt2 />
       </Button>
-      <Modal ref={modal} isOpen={hasMobileOpen}>
-        {renderLinks}
+      <Modal
+        ref={modal}
+        isOpen={hasMobileOpen}
+        justify="right"
+        align="top"
+        className="navigation__mobile"
+      >
+        <Logo {...logoLink} size={24} color="white" hasText hasIcon className="navigation__logo" />
+        <nav className="navigation__mobile-links">{renderMobileLinks}</nav>
       </Modal>
     </Container>
   );

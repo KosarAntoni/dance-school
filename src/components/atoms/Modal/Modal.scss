@@ -41,6 +41,46 @@
   }
 }
 
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-150%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-right {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(150%);
+  }
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -59,11 +99,8 @@
   &__inner {
     position: relative;
     z-index: map.get($z-index, 'modal');
-    height: 100%;
     padding: 20px;
     border-radius: 8px;
-    transform: translateY(100vh);
-    animation: slide-in $transition * 1.5 $transition 1 cubic-bezier(0.39, 0.8, 0.28, 1.07) forwards;
   }
 
   &__close {
@@ -73,12 +110,58 @@
     z-index: inherit;
   }
 
+  &--justify {
+    &-left {
+      margin-right: auto;
+      transform: translateX(-150%);
+      animation: slide-in-left $transition * 1.5 $transition 1 ease forwards;
+    }
+
+    &-center {
+      margin-right: auto;
+      margin-left: auto;
+      transform: translateY(100vh);
+      animation: slide-in $transition * 1.5 $transition 1 cubic-bezier(0.39, 0.8, 0.28, 1.07)
+        forwards;
+    }
+
+    &-right {
+      margin-left: auto;
+      transform: translateX(150%);
+      animation: slide-in-right $transition * 1.5 $transition 1 ease forwards;
+    }
+  }
+
+  &--align {
+    &-top {
+      align-self: flex-start;
+    }
+
+    &-center {
+      align-self: center;
+    }
+
+    &-bottom {
+      align-self: flex-end;
+    }
+  }
+
   &--fade-out {
     animation: fade-out $transition $transition 1 linear forwards;
 
     .modal {
-      &__inner {
-        animation: slide-out $transition * 1.5 ease-out forwards;
+      &--justify {
+        &-left {
+          animation: slide-out-left $transition * 1.5 ease-out forwards;
+        }
+
+        &-center {
+          animation: slide-out $transition * 1.5 ease-out forwards;
+        }
+
+        &-right {
+          animation: slide-out-right $transition * 1.5 ease-out forwards;
+        }
       }
     }
   }

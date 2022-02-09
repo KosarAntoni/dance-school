@@ -15,7 +15,7 @@ exports[`the NavigationLogo component renders correctly with required and option
       href="/"
     >
       <span
-        class="typography link__content typography--size-20 typography--size-md-24 typography--line-height-normal"
+        class="typography link__content typography--size-20 typography--size-lg-24 typography--line-height-normal"
         data-testid="typography-item"
       >
         <svg

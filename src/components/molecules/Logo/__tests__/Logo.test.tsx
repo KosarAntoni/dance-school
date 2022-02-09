@@ -31,12 +31,12 @@ test('the Logo component renders correctly with required and optional props', ()
   expect(linkNode).toHaveAttribute('href', url);
   expect(linkNode).toHaveAttribute('aria-label', ariaLabel);
 
-  // rerender with hasText prop
-  rerender(<Logo {...defaultProps} hasText />);
+  // rerender with optional props
+  rerender(<Logo {...defaultProps} hasText hasIcon />);
   logoNode = screen.getByTestId('logo-item');
 
   // the component has proper class
-  expect(logoNode).toHaveClass('logo--hidden-icon');
+  expect(logoNode).not.toHaveClass('logo--hidden-icon');
 
   // the component has propper links count
   const linkNodes = screen.getAllByRole('link');

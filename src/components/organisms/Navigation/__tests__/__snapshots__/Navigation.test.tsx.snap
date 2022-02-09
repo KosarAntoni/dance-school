@@ -15,7 +15,7 @@ exports[`the Navigation component renders correctly with required and optional p
       href="/"
     >
       <span
-        class="typography link__content typography--size-20 typography--size-md-24 typography--line-height-normal"
+        class="typography link__content typography--size-20 typography--size-lg-30 typography--line-height-normal"
         data-testid="typography-item"
       >
         <svg
@@ -40,14 +40,14 @@ exports[`the Navigation component renders correctly with required and optional p
       href="/"
     >
       <span
-        class="typography link__content typography--size-20 typography--size-md-24 typography--padding-left-sm typography--line-height-normal typography--bold"
+        class="typography link__content typography--size-20 typography--size-lg-30 typography--padding-left-sm typography--line-height-normal typography--bold"
         data-testid="typography-item"
       >
         Dance school
       </span>
     </a>
   </div>
-  <div
+  <nav
     class="navigation__links"
   >
     <a
@@ -55,7 +55,7 @@ exports[`the Navigation component renders correctly with required and optional p
       href="/about"
     >
       <span
-        class="typography link__content typography--size-14 typography--size-md-18 typography--padding-top-xs typography--padding-right-sm typography--padding-bottom-xs typography--padding-left-sm typography--line-height-normal"
+        class="typography link__content typography--size-14 typography--size-lg-18 typography--padding-top-xs typography--padding-right-sm typography--padding-bottom-xs typography--padding-left-sm typography--line-height-normal"
         data-testid="typography-item"
       >
         About
@@ -66,19 +66,19 @@ exports[`the Navigation component renders correctly with required and optional p
       href="/blog"
     >
       <span
-        class="typography link__content typography--size-14 typography--size-md-18 typography--padding-top-xs typography--padding-right-sm typography--padding-bottom-xs typography--padding-left-sm typography--line-height-normal"
+        class="typography link__content typography--size-14 typography--size-lg-18 typography--padding-top-xs typography--padding-right-sm typography--padding-bottom-xs typography--padding-left-sm typography--line-height-normal"
         data-testid="typography-item"
       >
         Blog
       </span>
     </a>
-  </div>
+  </nav>
   <button
     class="button navigation__menu-button button--outline-black button--around"
     type="button"
   >
     <span
-      class="typography button__content typography--size-14 typography--size-md-18 typography--padding-xs typography--line-height-normal"
+      class="typography button__content typography--size-14 typography--size-lg-24 typography--padding-xs typography--line-height-normal"
       data-testid="typography-item"
     >
       <svg
