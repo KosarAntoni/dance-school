@@ -15,8 +15,8 @@ const NavigationLogo: FC = () => {
 
   return (
     <Container
-      className="navigation-logo__wrapper"
-      innerClassName="navigation-logo"
+      outerClassName="navigation-logo__wrapper"
+      className="navigation-logo"
       data-testid="navigation-logo-item"
     >
       <Logo {...logoLink} size={{ base: 20, lg: 24 }} hasIcon className="navigation-logo__icon" />

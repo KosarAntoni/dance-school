@@ -54,8 +54,8 @@ const Footer: FC = () => {
   return (
     <Container
       as="footer"
-      className="footer__wrapper background--almost-black"
-      innerClassName="footer"
+      outerClassName="footer__wrapper background--almost-black"
+      className="footer"
       data-testid="footer-item"
     >
       <div className="footer__links">{renderLinks}</div>

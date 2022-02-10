@@ -2,7 +2,7 @@
 
 exports[`the Modal component renders correctly with required and optional props 1`] = `
 <div
-  class="container__inner modal__inner background--white modal--align-center modal--justify-center"
+  class="container modal__inner background--white modal--align-center modal--justify-center"
   data-testid="modal-item"
 >
   <button

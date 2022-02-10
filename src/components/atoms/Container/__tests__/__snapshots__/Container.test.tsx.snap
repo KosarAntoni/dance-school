@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the Container component renders correctly with required and optional props 1`] = `
+<div
+  class="container__outer container--wide container--gutter outer-test-class"
+  data-testid="container-item"
+>
+  <div
+    class="container test-class"
+  >
+    test content
+  </div>
+</div>
+`;

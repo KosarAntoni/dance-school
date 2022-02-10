@@ -28,8 +28,8 @@ const Modal: FC<ModalProps> = forwardRef(
     const [isFadeOut, setIsFadeOut] = useState<boolean | undefined>(false);
     const contentRef = useRef<HTMLDivElement>(null);
 
-    const modalClasses = classNames('modal', { 'modal--fade-out': isFadeOut });
-    const modalInnerClasses = classNames(
+    const modalOuterClasses = classNames('modal', { 'modal--fade-out': isFadeOut });
+    const modalClasses = classNames(
       'modal__inner',
       'background--white',
       { [`modal--align-${align}`]: align, [`modal--justify-${justify}`]: justify },
@@ -93,8 +93,8 @@ const Modal: FC<ModalProps> = forwardRef(
       <Container
         variant="fluid"
         innerRef={contentRef}
+        outerClassName={modalOuterClasses}
         className={modalClasses}
-        innerClassName={modalInnerClasses}
         data-testid="modal-item"
       >
         <Button

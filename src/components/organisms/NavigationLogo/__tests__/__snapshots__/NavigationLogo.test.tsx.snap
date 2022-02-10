@@ -2,7 +2,7 @@
 
 exports[`the NavigationLogo component renders correctly with required and optional props 1`] = `
 <div
-  class="container__inner navigation-logo"
+  class="container navigation-logo"
   data-testid="navigation-logo-item"
 >
   <div

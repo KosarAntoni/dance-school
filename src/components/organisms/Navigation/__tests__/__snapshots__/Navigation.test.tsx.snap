@@ -2,7 +2,7 @@
 
 exports[`the Navigation component renders correctly with required and optional props 1`] = `
 <div
-  class="container__inner navigation"
+  class="container navigation"
   data-testid="navigation-item"
 >
   <div

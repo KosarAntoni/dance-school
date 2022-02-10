@@ -1,12 +1,12 @@
 @import 'styles/component-set';
 
 .container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  max-width: $wrapper-default;
 
-  &__inner {
-    max-width: $wrapper-default;
+  &__outer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
   &--fluid {

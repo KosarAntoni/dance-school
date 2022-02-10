@@ -2,7 +2,7 @@
 
 exports[`the Footer component renders correctly with required and optional props 1`] = `
 <div
-  class="container__inner footer"
+  class="container footer"
   data-testid="footer-item"
 >
   <div

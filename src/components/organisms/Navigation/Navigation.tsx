@@ -73,8 +73,8 @@ const Navigation: FC<NavigationProps> = ({ hasMobileOpen }) => {
   return (
     <Container
       as="header"
-      className="navigation__wrapper"
-      innerClassName={navigationClasses}
+      outerClassName="navigation__wrapper"
+      className={navigationClasses}
       data-testid="navigation-item"
     >
       <Logo {...logoLink} size={30} hasText className="navigation__logo navigation__item-1" />

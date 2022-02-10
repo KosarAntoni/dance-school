@@ -8,7 +8,7 @@ import './Container.scss';
 const Container: FC<ContainerProps> = ({
   as,
   className,
-  innerClassName,
+  outerClassName,
   variant,
   gutter = true,
   innerRef,
@@ -16,19 +16,19 @@ const Container: FC<ContainerProps> = ({
   ...rest
 }) => {
   const Component = as || 'div';
-  const containerClassNames = classnames(
-    'container',
+  const containerOuterClassNames = classnames(
+    'container__outer',
     {
       [`container--${variant}`]: variant,
       'container--gutter': gutter,
     },
-    className
+    outerClassName
   );
-  const innerClassNames = classnames('container__inner', innerClassName);
+  const containerClassNames = classnames('container', className);
 
   return (
-    <Component className={containerClassNames}>
-      <div className={innerClassNames} ref={innerRef} {...rest}>
+    <Component className={containerOuterClassNames} data-testid="container-item">
+      <div className={containerClassNames} ref={innerRef} {...rest}>
         {children}
       </div>
     </Component>
