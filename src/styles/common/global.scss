@@ -9,3 +9,9 @@ html {
   background-color: $c-page-background;
   @include font-size(16);
 }
+
+.scroll {
+  &--prevent {
+    overflow: hidden;
+  }
+}
