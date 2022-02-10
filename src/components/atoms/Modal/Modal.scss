@@ -1,85 +1,6 @@
 @use 'sass:map';
 @import 'styles/component-set';
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes slide-in {
-  0% {
-    transform: translateY(100vh);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-out {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-100vh);
-  }
-}
-
-@keyframes slide-in-left {
-  0% {
-    transform: translateX(-150%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide-out-left {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-150%);
-  }
-}
-
-@keyframes slide-in-right {
-  0% {
-    transform: translateX(150%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide-out-right {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(150%);
-  }
-}
+@import './keyframes';
 
 .modal {
   position: fixed;
@@ -110,6 +31,27 @@
     z-index: inherit;
   }
 
+  &--align {
+    &-top {
+      align-self: flex-start;
+      transform: translateY(-150%);
+      animation: slide-in-top $transition * 1.5 $transition 1 ease forwards;
+    }
+
+    &-center {
+      align-self: center;
+      transform: translateY(100vh);
+      animation: slide-in $transition * 1.5 $transition 1 cubic-bezier(0.39, 0.8, 0.28, 1.07)
+        forwards;
+    }
+
+    &-bottom {
+      align-self: flex-end;
+      transform: translateY(150%);
+      animation: slide-in-bottom $transition * 1.5 $transition 1 ease forwards;
+    }
+  }
+
   &--justify {
     &-left {
       margin-right: auto;
@@ -120,9 +62,6 @@
     &-center {
       margin-right: auto;
       margin-left: auto;
-      transform: translateY(100vh);
-      animation: slide-in $transition * 1.5 $transition 1 cubic-bezier(0.39, 0.8, 0.28, 1.07)
-        forwards;
     }
 
     &-right {
@@ -132,31 +71,27 @@
     }
   }
 
-  &--align {
-    &-top {
-      align-self: flex-start;
-    }
-
-    &-center {
-      align-self: center;
-    }
-
-    &-bottom {
-      align-self: flex-end;
-    }
-  }
-
   &--fade-out {
     animation: fade-out $transition $transition 1 linear forwards;
 
     .modal {
-      &--justify {
-        &-left {
-          animation: slide-out-left $transition * 1.5 ease-out forwards;
+      &--align {
+        &-top {
+          animation: slide-out-top $transition * 1.5 ease-out forwards;
         }
 
         &-center {
           animation: slide-out $transition * 1.5 ease-out forwards;
+        }
+
+        &-bottom {
+          animation: slide-out-bottom $transition * 1.5 ease-out forwards;
+        }
+      }
+
+      &--justify {
+        &-left {
+          animation: slide-out-left $transition * 1.5 ease-out forwards;
         }
 
         &-right {

@@ -15,7 +15,7 @@ exports[`the Navigation component renders correctly with required and optional p
       href="/"
     >
       <span
-        class="typography link__content typography--size-20 typography--size-lg-30 typography--line-height-normal"
+        class="typography link__content typography--size-30 typography--line-height-normal"
         data-testid="typography-item"
       >
         <svg
@@ -40,7 +40,7 @@ exports[`the Navigation component renders correctly with required and optional p
       href="/"
     >
       <span
-        class="typography link__content typography--size-20 typography--size-lg-30 typography--padding-left-sm typography--line-height-normal typography--bold"
+        class="typography link__content typography--size-30 typography--padding-left-sm typography--line-height-normal typography--bold"
         data-testid="typography-item"
       >
         Dance school
@@ -78,7 +78,7 @@ exports[`the Navigation component renders correctly with required and optional p
     type="button"
   >
     <span
-      class="typography button__content typography--size-14 typography--size-lg-24 typography--padding-xs typography--line-height-normal"
+      class="typography button__content typography--size-24 typography--padding-xs typography--line-height-normal"
       data-testid="typography-item"
     >
       <svg

@@ -180,7 +180,7 @@ const IndexPage = () => {
           TEST LINK
         </Link>
       </div>
-      <Modal ref={modal}>
+      <Modal ref={modal} align="bottom" justify="center">
         <h1 style={headingStyles}>
           Congratulations
           <br />

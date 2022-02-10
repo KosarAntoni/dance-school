@@ -77,16 +77,11 @@ const Navigation: FC<NavigationProps> = ({ hasMobileOpen }) => {
       innerClassName={navigationClasses}
       data-testid="navigation-item"
     >
-      <Logo
-        {...logoLink}
-        size={{ base: 20, lg: 30 }}
-        hasText
-        className="navigation__logo navigation__item-1"
-      />
+      <Logo {...logoLink} size={30} hasText className="navigation__logo navigation__item-1" />
       <nav className="navigation__links">{renderDesktopLinks}</nav>
       <Button
         {...menuButton}
-        size={{ base: 14, lg: 24 }}
+        size={24}
         padding="xs"
         className="navigation__menu-button"
         onClick={onMenuButtonClick}
