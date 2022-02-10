@@ -1,54 +1,50 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# 👨‍💻 WIP 👨‍💻
 
-## 🚀 Quick start
+# Dance School
 
-1.  **Create a Gatsby site.**
+> Dance School webpage
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## Table of contents
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Features](#features)
+- [Inspiration](#inspiration)
+- [Contact](#contact)
 
-2.  **Start developing.**
+## Technologies
 
-    Navigate into your new site’s directory and start it up.
+#### Frontend
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+> hosted by [netlify](https://www.netlify.com/)
 
-3.  **Open the code and start customizing!**
+- Type Script
+- Gatsby
+- SCSS
+- JEST & React Testing Library
+- PLOP
+- Atomic designed
 
-    Your site is now running at http://localhost:8000!
+#### Backend
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+> hosted by [graphcms](https://graphcms.com/)
 
-4.  **Learn more**
+## Setup
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+#### [Link to live](https://amazing-tereshkova-fe05db.netlify.app/) <br/>
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Features
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+- Fully responsive
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Status
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Project is: _in progres_.
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Inspiration
 
-## 🚀 Quick start (Gatsby Cloud)
+Inspired and based on [Commerce Layer](https://commercelayer.io/) designs and [Dance Atelier](https://danceatelier.pl/) content structure.
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+## Contact
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+Created by [Anton Kosar](https://www.linkedin.com/in/anton-kosar-51a33617a/) - feel free to contact me!
