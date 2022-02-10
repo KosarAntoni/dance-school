@@ -5,8 +5,8 @@ import classNames from 'classnames';
 import Button from 'atoms/Button';
 import Container from 'atoms/Container';
 import Link from 'atoms/Link';
-import Modal, { ModalSetters } from 'atoms/Modal';
 import Logo from 'molecules/Logo';
+import Modal, { ModalSetters } from 'molecules/Modal';
 
 import { useNavigationQuery } from 'hooks/useNavigationQuery';
 

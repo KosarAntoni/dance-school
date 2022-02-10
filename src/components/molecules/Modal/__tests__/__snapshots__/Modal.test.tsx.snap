@@ -2,7 +2,7 @@
 
 exports[`the Modal component renders correctly with required and optional props 1`] = `
 <div
-  class="container modal__inner background--white modal--align-center modal--justify-center"
+  class="container modal__inner background--white modal--align-center modal--justify-center test-class"
   data-testid="modal-item"
 >
   <button
@@ -30,6 +30,6 @@ exports[`the Modal component renders correctly with required and optional props 
       </svg>
     </span>
   </button>
-  TEST TEXT
+  test content
 </div>
 `;

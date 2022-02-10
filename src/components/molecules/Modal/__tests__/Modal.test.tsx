@@ -3,8 +3,17 @@ import { act } from 'react-dom/test-utils';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { createModalRoot } from 'testUtils/createModalRoot';
 
-import { ModalSetters } from '..';
+import { ModalProps, ModalSetters } from '..';
+import {
+  ModalChildrenMock,
+  ModalDefaultClassesMock,
+  ModalDefaultPropsMock,
+} from '../__mock__/mock';
 import Modal from '../Modal';
+
+const defaultProps: ModalProps = {
+  ...ModalDefaultPropsMock,
+};
 
 jest.useFakeTimers();
 jest.spyOn(global, 'setTimeout');
@@ -32,8 +41,8 @@ test('the Modal component renders correctly with required and optional props', (
   const modalRef = React.createRef<ModalSetters>();
 
   render(
-    <Modal ref={modalRef} isOpen>
-      TEST TEXT
+    <Modal ref={modalRef} {...defaultProps}>
+      {ModalChildrenMock}
     </Modal>
   );
 
@@ -46,7 +55,10 @@ test('the Modal component renders correctly with required and optional props', (
   expect(modalNode).toMatchSnapshot();
 
   // the component has content inside
-  expect(screen.getByText('TEST TEXT')).toBeInTheDocument();
+  expect(screen.getByText(ModalChildrenMock)).toBeInTheDocument();
+
+  // the component has right classes
+  expect(modalNode).toHaveClass(ModalDefaultClassesMock.join(' '));
 
   // modal closes after click on background
   fireEvent.click(modalNode.parentElement!);

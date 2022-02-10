@@ -3,8 +3,8 @@ import * as React from 'react';
 import Button from 'atoms/Button';
 import Container from 'atoms/Container';
 import Link from 'atoms/Link';
-import Modal from 'atoms/Modal';
 import Typography from 'atoms/Typography';
+import Modal from 'molecules/Modal';
 
 // styles
 

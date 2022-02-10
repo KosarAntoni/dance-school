@@ -16,7 +16,7 @@ import Container from 'atoms/Container';
 
 import { isBrowser } from 'utils/browser';
 
-import { ModalProps } from './models.d';
+import { ModalProps } from './models';
 
 import './Modal.scss';
 
