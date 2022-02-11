@@ -1,2 +1,3 @@
 export { default } from './{{properCase name}}';
-export * from './models.d';
+{{#if models}}export * from './models.d';{{/if}}
+{{#if mock}}export * from './__mock__/mock';{{/if}}
