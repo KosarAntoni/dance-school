@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the Badge component renders correctly with required and optional props 1`] = `
+<div
+  class="typography typography--size-14 typography--padding-top-xxs typography--padding-right-xs typography--padding-bottom-xxs typography--padding-left-xs typography--line-height-normal badge badge--translucent badge--orange test-class"
+  data-testid="badge-item"
+>
+  test content
+</div>
+`;

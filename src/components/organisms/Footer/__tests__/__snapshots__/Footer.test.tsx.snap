@@ -13,7 +13,7 @@ exports[`the Footer component renders correctly with required and optional props
       href="/about"
     >
       <span
-        class="typography link__content typography--size-14 typography--size-md-20 typography--line-height-normal"
+        class="typography typography--size-14 typography--size-md-20 typography--line-height-normal link__content"
         data-testid="typography-item"
       >
         About
@@ -24,7 +24,7 @@ exports[`the Footer component renders correctly with required and optional props
       href="/blog"
     >
       <span
-        class="typography link__content typography--size-14 typography--size-md-20 typography--line-height-normal"
+        class="typography typography--size-14 typography--size-md-20 typography--line-height-normal link__content"
         data-testid="typography-item"
       >
         Blog
@@ -42,7 +42,7 @@ exports[`the Footer component renders correctly with required and optional props
       target="_blank"
     >
       <span
-        class="typography link__content typography--size-24 typography--line-height-normal"
+        class="typography typography--size-24 typography--line-height-normal link__content"
         data-testid="typography-item"
       >
         <svg
@@ -68,7 +68,7 @@ exports[`the Footer component renders correctly with required and optional props
       target="_blank"
     >
       <span
-        class="typography link__content typography--size-24 typography--line-height-normal"
+        class="typography typography--size-24 typography--line-height-normal link__content"
         data-testid="typography-item"
       >
         <svg
@@ -94,7 +94,7 @@ exports[`the Footer component renders correctly with required and optional props
       target="_blank"
     >
       <span
-        class="typography link__content typography--size-24 typography--line-height-normal"
+        class="typography typography--size-24 typography--line-height-normal link__content"
         data-testid="typography-item"
       >
         <svg
@@ -114,7 +114,7 @@ exports[`the Footer component renders correctly with required and optional props
     </a>
   </div>
   <div
-    class="typography color--gray typography--size-12 typography--size-md-18 typography--line-height-normal"
+    class="typography typography--size-12 typography--size-md-18 typography--line-height-normal color--gray"
     data-testid="typography-item"
   >
     © 

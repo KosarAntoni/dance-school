@@ -11,7 +11,7 @@ exports[`the Logo component renders correctly with required and optional props 1
     href="/"
   >
     <span
-      class="typography link__content typography--line-height-normal"
+      class="typography typography--line-height-normal link__content"
       data-testid="typography-item"
     >
       <svg

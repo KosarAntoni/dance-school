@@ -43,6 +43,12 @@ fragment ScheduledOperation on ScheduledOperation {
       locale
       stage
     }
+    ... on Badge {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+      stage
+    }
     ... on Banner {
       remoteTypeName: __typename
       remoteId: id

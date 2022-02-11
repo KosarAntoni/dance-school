@@ -24,11 +24,15 @@ const Button: FC<ButtonProps> = ({
   size,
   padding,
 }) => {
-  const buttonClasses = classNames('button', className, {
-    [`button--${variant}-${color}`]: variant && color,
-    [`button--${space}`]: space,
-    'button--disabled': disabled,
-  });
+  const buttonClasses = classNames(
+    'button',
+    {
+      [`button--${variant}-${color}`]: variant && color,
+      [`button--${space}`]: space,
+      'button--disabled': disabled,
+    },
+    className
+  );
 
   const buttonContentClasses = classNames('button__content');
 

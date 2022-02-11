@@ -1,0 +1,96 @@
+@use 'sass:map';
+@import 'styles/component-set';
+
+.badge {
+  position: relative;
+  z-index: map.get($z-index, 'ground');
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    z-index: map.get($z-index, 'underground');
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    content: '';
+  }
+
+  &--translucent {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
+  &--arrow {
+    margin-left: 8px;
+
+    &::after {
+      position: absolute;
+      left: -6px;
+      z-index: map.get($z-index, 'underground');
+      height: 74%;
+      border-radius: inherit;
+      content: '';
+      transform: rotate(45deg);
+      aspect-ratio: 1 / 1;
+      justify-self: flex-end;
+    }
+  }
+
+  &--orange {
+    &::before,
+    &::after {
+      background-color: $c-orange;
+    }
+
+    &.badge {
+      &--translucent {
+        color: $c-orange;
+      }
+    }
+  }
+
+  &--blue {
+    color: $c-white;
+
+    &::before,
+    &::after {
+      background-color: $c-pastel-blue;
+    }
+
+    &.badge {
+      &--translucent {
+        color: $c-pastel-blue;
+      }
+    }
+  }
+
+  &--green {
+    &::before,
+    &::after {
+      background-color: $c-green;
+    }
+
+    &.badge {
+      &--translucent {
+        color: $c-green;
+      }
+    }
+  }
+
+  &--white {
+    &::before,
+    &::after {
+      background-color: $c-white;
+    }
+
+    &.badge {
+      &--translucent {
+        color: $c-white;
+      }
+    }
+  }
+}

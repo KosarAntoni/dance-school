@@ -3,7 +3,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 
 import {
   ButtonChildrenMock,
-  buttonDefaultClassesMock,
+  ButtonDefaultClassesMock,
   ButtonDefaultPropsMock,
   testFunction,
 } from '../__mock__/mock';
@@ -31,5 +31,5 @@ test('the Button component renders correctly with required and optional props', 
   expect(testFunction).toBeCalled();
 
   // the comonent has correct classes
-  expect(buttonNode).toHaveClass(buttonDefaultClassesMock.join(' '));
+  expect(buttonNode).toHaveClass(ButtonDefaultClassesMock.join(' '));
 });

@@ -39,7 +39,6 @@ const Typography: FC<TypographyProps> = ({
 
   const componentClasses = classNames(
     'typography',
-    className,
     ...sizeClasses,
     ...paddingClasses,
     ...alignClasses,
@@ -48,7 +47,8 @@ const Typography: FC<TypographyProps> = ({
       [`typography--${weight}`]: weight,
       'typography--italic': italic,
       'typography--heading': as?.toString().charAt(0) === 'h',
-    }
+    },
+    className
   );
 
   return (

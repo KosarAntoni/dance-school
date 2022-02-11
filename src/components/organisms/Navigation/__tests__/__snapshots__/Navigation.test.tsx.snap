@@ -15,7 +15,7 @@ exports[`the Navigation component renders correctly with required and optional p
       href="/"
     >
       <span
-        class="typography link__content typography--size-30 typography--line-height-normal"
+        class="typography typography--size-30 typography--line-height-normal link__content"
         data-testid="typography-item"
       >
         <svg
@@ -40,7 +40,7 @@ exports[`the Navigation component renders correctly with required and optional p
       href="/"
     >
       <span
-        class="typography link__content typography--size-30 typography--padding-left-sm typography--line-height-normal typography--bold"
+        class="typography typography--size-30 typography--padding-left-sm typography--line-height-normal typography--bold link__content"
         data-testid="typography-item"
       >
         Dance school
@@ -55,7 +55,7 @@ exports[`the Navigation component renders correctly with required and optional p
       href="/about"
     >
       <span
-        class="typography link__content typography--size-14 typography--size-lg-18 typography--padding-top-xs typography--padding-right-sm typography--padding-bottom-xs typography--padding-left-sm typography--line-height-normal"
+        class="typography typography--size-14 typography--size-lg-18 typography--padding-top-xs typography--padding-right-sm typography--padding-bottom-xs typography--padding-left-sm typography--line-height-normal link__content"
         data-testid="typography-item"
       >
         About
@@ -66,7 +66,7 @@ exports[`the Navigation component renders correctly with required and optional p
       href="/blog"
     >
       <span
-        class="typography link__content typography--size-14 typography--size-lg-18 typography--padding-top-xs typography--padding-right-sm typography--padding-bottom-xs typography--padding-left-sm typography--line-height-normal"
+        class="typography typography--size-14 typography--size-lg-18 typography--padding-top-xs typography--padding-right-sm typography--padding-bottom-xs typography--padding-left-sm typography--line-height-normal link__content"
         data-testid="typography-item"
       >
         Blog
@@ -78,11 +78,11 @@ exports[`the Navigation component renders correctly with required and optional p
   >
     <a
       aria-label="Schedule"
-      class="button navigation__item-4 button--solid-blue button--around"
+      class="button button--solid-blue button--around navigation__item-4"
       href="/schedule"
     >
       <span
-        class="typography button__content typography--size-14 typography--size-lg-18 typography--padding-top-xs typography--padding-right-sm typography--padding-bottom-xs typography--padding-left-sm typography--line-height-normal"
+        class="typography typography--size-14 typography--size-lg-18 typography--padding-top-xs typography--padding-right-sm typography--padding-bottom-xs typography--padding-left-sm typography--line-height-normal button__content"
         data-testid="typography-item"
       >
         Schedule
@@ -90,11 +90,11 @@ exports[`the Navigation component renders correctly with required and optional p
     </a>
   </nav>
   <button
-    class="button navigation__menu-button button--outline-black button--around"
+    class="button button--outline-black button--around navigation__menu-button"
     type="button"
   >
     <span
-      class="typography button__content typography--size-24 typography--padding-xs typography--line-height-normal"
+      class="typography typography--size-24 typography--padding-xs typography--line-height-normal button__content"
       data-testid="typography-item"
     >
       <svg

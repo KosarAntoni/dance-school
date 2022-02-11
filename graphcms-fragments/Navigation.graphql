@@ -44,7 +44,7 @@ fragment Navigation on Navigation {
       stage
     }
   }
-  menuButton {
+  buttons {
     ... on Button {
       remoteTypeName: __typename
       remoteId: id
@@ -52,7 +52,7 @@ fragment Navigation on Navigation {
       stage
     }
   }
-  buttons {
+  menuButton {
     ... on Button {
       remoteTypeName: __typename
       remoteId: id

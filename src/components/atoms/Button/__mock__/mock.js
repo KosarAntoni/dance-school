@@ -1,6 +1,6 @@
 export const testFunction = jest.fn();
 
-export const buttonDefaultClassesMock = ['button', 'button--solid-blue', 'test-class'];
+export const ButtonDefaultClassesMock = ['button', 'button--solid-blue', 'test-class'];
 
 export const ButtonDefaultPropsMock = {
   onClick: testFunction,

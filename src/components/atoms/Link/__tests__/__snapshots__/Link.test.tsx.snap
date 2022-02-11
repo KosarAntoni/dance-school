@@ -6,7 +6,7 @@ exports[`the Link component renders correctly with required and optional props 1
   href="/about"
 >
   <span
-    class="typography link__content typography--size-20 typography--line-height-normal"
+    class="typography typography--size-20 typography--line-height-normal link__content"
     data-testid="typography-item"
   >
     test content
