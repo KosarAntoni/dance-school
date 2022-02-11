@@ -52,6 +52,14 @@ fragment Navigation on Navigation {
       stage
     }
   }
+  buttons {
+    ... on Button {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+      stage
+    }
+  }
   scheduledIn {
     ... on ScheduledOperation {
       remoteTypeName: __typename

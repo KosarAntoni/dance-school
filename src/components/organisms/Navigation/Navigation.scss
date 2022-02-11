@@ -81,16 +81,27 @@ $animated-count: 10;
     max-width: 500px;
     justify-self: flex-end;
 
-    &-links {
-      display: flex;
-      flex-direction: column;
-      padding-top: 50px;
-    }
-
     .navigation {
       &__logo {
         margin-top: 6px;
         mix-blend-mode: difference;
+      }
+
+      &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 50px;
+      }
+
+      &__buttons {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+      }
+
+      &__item {
+        margin-bottom: 5px;
       }
     }
   }

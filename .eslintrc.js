@@ -21,6 +21,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    '@typescript-eslint/no-unused-vars': 2,
     '@typescript-eslint/consistent-type-definitions': [2, 'type'],
     '@typescript-eslint/consistent-indexed-object-style': [2, 'record'],
     '@typescript-eslint/explicit-function-return-type': 0,

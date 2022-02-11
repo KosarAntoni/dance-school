@@ -73,6 +73,22 @@ exports[`the Navigation component renders correctly with required and optional p
       </span>
     </a>
   </nav>
+  <nav
+    class="navigation__buttons"
+  >
+    <a
+      aria-label="Schedule"
+      class="button navigation__item-4 button--solid-blue button--around"
+      href="/schedule"
+    >
+      <span
+        class="typography button__content typography--size-14 typography--size-lg-18 typography--padding-top-xs typography--padding-right-sm typography--padding-bottom-xs typography--padding-left-sm typography--line-height-normal"
+        data-testid="typography-item"
+      >
+        Schedule
+      </span>
+    </a>
+  </nav>
   <button
     class="button navigation__menu-button button--outline-black button--around"
     type="button"

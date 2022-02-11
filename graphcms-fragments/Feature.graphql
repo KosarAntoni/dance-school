@@ -38,18 +38,18 @@ fragment Feature on Feature {
     }
   }
   icon
-  scheduledIn {
-    ... on ScheduledOperation {
-      remoteTypeName: __typename
-      remoteId: id
-      stage
-    }
-  }
   grid {
     ... on Grid {
       remoteTypeName: __typename
       remoteId: id
       locale
+      stage
+    }
+  }
+  scheduledIn {
+    ... on ScheduledOperation {
+      remoteTypeName: __typename
+      remoteId: id
       stage
     }
   }

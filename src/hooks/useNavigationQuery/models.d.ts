@@ -7,5 +7,6 @@ export type navigationQueryType = {
   locale: locales;
   pages: pageUrl[];
   logoLink: Link;
+  buttons: Button[];
   menuButton: Button;
 };

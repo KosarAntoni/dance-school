@@ -23,7 +23,7 @@ const Navigation: FC<NavigationProps> = ({ hasMobileOpen }) => {
   const nodes = useNavigationQuery();
   const lang = process.env.GATSBY_DEFAULT_LANG;
   const [navigationData] = nodes.filter(({ locale }) => locale === lang);
-  const { logoLink, pages, menuButton } = navigationData;
+  const { logoLink, pages, buttons, menuButton } = navigationData;
 
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
@@ -47,10 +47,11 @@ const Navigation: FC<NavigationProps> = ({ hasMobileOpen }) => {
     <Link
       key={title}
       url={url}
-      variant="simple"
+      variant="solid"
       color="black"
       size={{ base: 20, lg: 24 }}
-      padding={{ bottom: 'xl' }}
+      padding={{ top: 'xs', right: 'sm', bottom: 'xs', left: 'sm' }}
+      className="navigation__item"
     >
       {title}
     </Link>
@@ -70,6 +71,28 @@ const Navigation: FC<NavigationProps> = ({ hasMobileOpen }) => {
     </Link>
   ));
 
+  const renderMobileButtons = buttons?.map(({ label, url, ariaLabel, variant, color }) => (
+    <Button
+      {...{ url, variant, color, ariaLabel }}
+      size={{ base: 20, lg: 24 }}
+      padding={{ top: 'xs', right: 'sm', bottom: 'xs', left: 'sm' }}
+      className="navigation__item"
+    >
+      {label}
+    </Button>
+  ));
+
+  const renderDesktopButtons = buttons?.map(({ label, url, ariaLabel, variant, color }, index) => (
+    <Button
+      {...{ url, variant, color, ariaLabel }}
+      size={{ base: 14, lg: 18 }}
+      padding={{ top: 'xs', right: 'sm', bottom: 'xs', left: 'sm' }}
+      className={`navigation__item-${index + 2 + pages.length}`}
+    >
+      {label}
+    </Button>
+  ));
+
   return (
     <Container
       as="header"
@@ -79,6 +102,7 @@ const Navigation: FC<NavigationProps> = ({ hasMobileOpen }) => {
     >
       <Logo {...logoLink} size={30} hasText className="navigation__logo navigation__item-1" />
       <nav className="navigation__links">{renderDesktopLinks}</nav>
+      <nav className="navigation__buttons">{renderDesktopButtons}</nav>
       <Button
         {...menuButton}
         size={24}
@@ -96,7 +120,8 @@ const Navigation: FC<NavigationProps> = ({ hasMobileOpen }) => {
         className="navigation__mobile"
       >
         <Logo {...logoLink} size={24} color="white" hasText hasIcon className="navigation__logo" />
-        <nav className="navigation__mobile-links">{renderMobileLinks}</nav>
+        <nav className="navigation__links">{renderMobileLinks}</nav>
+        <nav className="navigation__buttons">{renderMobileButtons}</nav>
       </Modal>
     </Container>
   );

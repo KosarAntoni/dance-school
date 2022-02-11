@@ -19,7 +19,7 @@ const NavigationLogo: FC = () => {
       className="navigation-logo"
       data-testid="navigation-logo-item"
     >
-      <Logo {...logoLink} size={{ base: 20, lg: 24 }} hasIcon className="navigation-logo__icon" />
+      <Logo {...logoLink} size={30} hasIcon className="navigation-logo__icon" />
     </Container>
   );
 };

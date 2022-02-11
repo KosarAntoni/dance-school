@@ -17,6 +17,9 @@ export const useNavigationQuery = (): navigationQueryType[] => {
             title
             slug
           }
+          buttons {
+            ...Button
+          }
           menuButton {
             ...Button
           }

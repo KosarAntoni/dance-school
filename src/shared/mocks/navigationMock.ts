@@ -32,11 +32,22 @@ export const NavigationMock = {
           color: 'black',
           ariaLabel: null,
         },
+        buttons: [
+          {
+            id: 'Button:ckzgywye0n3ik0e51jmj6dw5k:en:PUBLISHED',
+            variant: 'solid',
+            url: '/schedule',
+            label: 'Schedule',
+            color: 'blue',
+            ariaLabel: 'Schedule',
+          },
+        ],
         locale: 'en',
       },
       {
         logoLink: null,
         pages: [],
+        buttons: [],
         menuButton: null,
         locale: 'pl',
       },
