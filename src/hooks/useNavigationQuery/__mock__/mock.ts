@@ -1,4 +1,4 @@
-export const NavigationMock = {
+export const useNavigationQueryMock = {
   allGraphCmsNavigation: {
     nodes: [
       {

@@ -1,4 +1,4 @@
-export const FooterMock = {
+export const useFooterQueryMock = {
   allGraphCmsFooter: {
     nodes: [
       {

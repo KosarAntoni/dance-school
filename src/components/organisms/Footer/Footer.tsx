@@ -2,14 +2,13 @@ import React, { FC } from 'react';
 import { FaFacebookF } from '@react-icons/all-files/fa/FaFacebookF';
 import { FaInstagram } from '@react-icons/all-files/fa/FaInstagram';
 import { FaYoutube } from '@react-icons/all-files/fa/FaYoutube';
+import { socialLinkTheme } from 'shared/types/commonTypes.d';
 
 import Container from 'atoms/Container';
 import Link from 'atoms/Link';
 import Typography from 'atoms/Typography';
 
 import { useFooterQuery } from 'hooks/useFooterQuery';
-
-import { socialLinkTheme } from 'types/commonTypes.d';
 
 import './Footer.scss';
 

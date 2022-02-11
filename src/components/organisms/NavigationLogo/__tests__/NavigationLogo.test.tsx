@@ -1,7 +1,8 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { NavigationMock } from 'shared/mocks';
 import { useStaticQueryMock } from 'testUtils/useStaticQueryMock';
+
+import { useNavigationQueryMock } from 'hooks/useNavigationQuery';
 
 import NavigationLogo from '../NavigationLogo';
 
@@ -22,12 +23,12 @@ afterEach(() => {
   process.env = originalEnv;
 });
 
-const [{ logoLink }] = NavigationMock.allGraphCmsNavigation.nodes.filter(
+const [{ logoLink }] = useNavigationQueryMock.allGraphCmsNavigation.nodes.filter(
   ({ locale }) => locale === GATSBY_DEFAULT_LANG
 );
 
 test('the NavigationLogo component renders correctly with required and optional props', () => {
-  useStaticQueryMock(NavigationMock);
+  useStaticQueryMock(useNavigationQueryMock);
 
   render(<NavigationLogo />);
 

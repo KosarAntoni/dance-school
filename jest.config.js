@@ -11,7 +11,6 @@ module.exports = {
     'templates/(.*)': '<rootDir>/src/components/templates/$1',
     'pages/(.*)': '<rootDir>/src/pages/$1',
     'utils/(.*)': '<rootDir>/src/utils/$1',
-    'types/(.*)': '<rootDir>/src/types/$1',
     'hooks/(.*)': '<rootDir>/src/hooks/$1',
     'testUtils/(.*)': '<rootDir>/src/testUtils/$1',
     'shared/(.*)': '<rootDir>/src/shared/$1',

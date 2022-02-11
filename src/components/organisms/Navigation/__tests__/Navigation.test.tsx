@@ -1,8 +1,9 @@
 import React, { useState as useStateMock } from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
-import { NavigationMock } from 'shared/mocks';
 import { createModalRoot } from 'testUtils/createModalRoot';
 import { useStaticQueryMock } from 'testUtils/useStaticQueryMock';
+
+import { useNavigationQueryMock } from 'hooks/useNavigationQuery';
 
 import Navigation from '../Navigation';
 
@@ -29,7 +30,7 @@ afterEach(() => {
   process.env = originalEnv;
 });
 
-const [{ pages, buttons }] = NavigationMock.allGraphCmsNavigation.nodes.filter(
+const [{ pages, buttons }] = useNavigationQueryMock.allGraphCmsNavigation.nodes.filter(
   ({ locale }) => locale === GATSBY_DEFAULT_LANG
 );
 
@@ -38,7 +39,7 @@ const linksCount = pages.length + buttons.length + 2;
 test('the Navigation component renders correctly with required and optional props', () => {
   createModalRoot();
 
-  useStaticQueryMock(NavigationMock);
+  useStaticQueryMock(useNavigationQueryMock);
 
   const { rerender } = render(<Navigation />);
 

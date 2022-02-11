@@ -1,7 +1,7 @@
+import { locales, pageUrl } from 'shared/types/commonTypes';
+
 import { Button } from 'atoms/Button';
 import { Link } from 'atoms/Link';
-
-import { locales, pageUrl } from 'types/commonTypes';
 
 export type navigationQueryType = {
   locale: locales;

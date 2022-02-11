@@ -1,4 +1,4 @@
-import { locales, pageUrl, socialLink } from 'types/commonTypes';
+import { locales, pageUrl, socialLink } from 'shared/types/commonTypes';
 
 export type footerQueryType = {
   locale: locales;
